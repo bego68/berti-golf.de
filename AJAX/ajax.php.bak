@@ -1,0 +1,11 @@
+
+<!-- saved from url=(0060)http://matthiasschuetz.com/content/artikel/jquery_tut5_2.txt -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;">&lt;?php
+	if ($_GET) {
+		echo $_GET["ajaxget"];
+	} else if ($_POST) {
+		echo $_POST["ajaxpost"];
+	} else {
+		echo "Direktaufruf oder load()-Daten (GET)";
+	}
+?&gt;</pre></body></html>

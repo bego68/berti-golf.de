@@ -1,0 +1,83 @@
+<html><head><title>Willkommen auf Berti-Golf.de</title>
+<link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+<link rel="STYLESHEET" type="text/css" href="css/style.css">
+<script language="JavaScript1.2" type="text/javascript" src="hoover.js"></script></head>
+<body onload="imgPreload()" cellpadding="0" cellspacing="0" leftmargin="0" toomargin="0" bgcolor="#476c8b" marginheight="0" marginwidth="0">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tbody><tr><td><img src="images/1x1_trans.gif" alt="" border="0" height="20" width="2"></td>
+  </tr>
+  <tr><td align="center" valign="top">
+          <table border="0" cellpadding="0" cellspacing="0" width="318">
+            <tbody><tr><td><img src="images/start_logo.gif" alt="" border="0" height="42" width="318"></td>
+            </tr>
+            <tr><td bgcolor="#ffffff"><img src="images/1x1_trans.gif" alt="" border="0" height="1" width="224"><img src="images/start_arms.gif" alt="" border="0" height="1" width="12"></td>
+            </tr>
+            <tr><td><img src="images/start_bild.jpg" alt="" border="0" height="81" width="318"></td>
+            </tr>
+            <tr><td bgcolor="#ffffff"><img src="images/1x1_trans.gif" alt="" border="0" height="1" width="1"></td>
+            </tr>
+            <tr><td><img src="images/1x1_trans.gif" alt="" border="0" height="3" width="1"></td>
+            </tr>
+            <tr><td class="textklein">
+                    <h2>Impressum</h2>
+<p>
+Hubertus Golf<br />
+
+		Waldeslust 11 , 81377 München<br />
+		
+		<br />
+		email: info@berti-golf.de<br />
+		Tel.: +49 89 60035616<br />
+		<br />
+		USt-IDNr. gemäß § 27 a Umsatzsteuergesetz: DE221522257<br /><br />
+		Steuernummer: 214/32618<br /><br />
+		
+			
+			
+			</p>
+		</div></td>
+            </tr>
+            <tr><td><table border="0" cellpadding="0" cellspacing="0" width="318">
+                      <tbody><tr valign="bottom">
+                          <td><img src="images/unterschrift.gif" alt="" border="0" height="61" width="248"></td>
+                          <td><img src="images/1x1_ffffff.gif" alt="" border="0" height="36" width="1"></td>
+                          <td><a href="kontakt.html" onmouseover="imgHi('start_kontakt')" onmouseout="imgLo('start_kontakt')"><img name="roll_start_kontakt" src="images/start_kontakt.gif" alt="" border="0" height="10" width="69"></a><br>
+                              <img src="images/1x1_trans.gif" alt="" border="0" height="8" width="2"><br>
+                              </td>
+                      </tr>
+                    </tbody></table>
+            </td></tr>
+            <tr><td bgcolor="#ffffff"><img src="images/1x1_trans.gif" alt="" border="0" height="1" width="1"></td>
+            </tr>
+            <tr><td><table border="0" cellpadding="0" cellspacing="0" width="318">
+                      <tbody><tr><td><img src="images/1x1_trans.gif" alt="" border="0" height="5" width="102"></td>
+                          <td><img src="images/1x1_trans.gif" alt="" border="0" height="1" width="105"></td>
+                          <td><img src="images/1x1_trans.gif" alt="" border="0" height="1" width="111"></td>
+                      </tr>
+                      <tr><td><a href="referenz.html" onmouseover="imgHi('start_referenzen')" onmouseout="imgLo('start_referenzen')"><img name="roll_start_referenzen" src="images/start_referenzen.gif" alt="" border="0" height="10" width="88"></a></td>
+                          <td><a href="leistung.html" onmouseover="imgHi('start_leistungen')" onmouseout="imgLo('start_leistungen')"><img name="roll_start_leistungen" src="images/start_leistungen.gif" alt="" border="0" height="10" width="90"></a></td>
+                          <td><a href="partner.html" onmouseover="imgHi('start_team_partner')" onmouseout="imgLo('start_team_partner')"><img name="roll_start_team_partner" src="images/start_team_partner.gif" alt="" border="0" height="10" width="111"></a></td>
+                      </tr>
+                    </tbody></table>
+                   </td>
+            </tr>
+	  </tbody></table>
+                    <IMG SRC="images/1x1_trans.gif" WIDTH=2 HEIGHT=10 ALT="" BORDER=0><BR>
+		    <A HREF="leistung.html"><IMG SRC="images/start_teaser.jpg" WIDTH=318 HEIGHT=87 ALT="Start" BORDER=0></A>
+		    <br><br>
+<IMG SRC="images/1x1_trans.gif" WIDTH=2 HEIGHT=10 ALT="" BORDER=0><BR>
+		    <A HREF="impressum.html">impressum.html</A></TD>
+		    
+		    
+		    </TD>
+
+  
+ 
+ 
+  
+  </td>
+  </tr>
+</tbody></table>
+</body>
+
+</html>

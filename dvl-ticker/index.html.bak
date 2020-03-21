@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset=utf-8 />
+	<meta name="viewport" content="device-width" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<title>DVL-TICKER: HOME</title>
+	<link rel="stylesheet" href="dvl-ticker.css" type="text/css" />
+</head>
+<body>
+
+	<header>
+		<div class="dvl_buttton floatleft"><p>Live Ticker</p></div>
+		<div class="mitte">
+				<h1>Deutsche Volleyball-Liga</h1>
+				<p>Volleyball Bundesliga - Liveergebnisse</p>
+		</div>
+		<div class="dvl_stardesmonats floatright">echte Menschen echte Stars </div>
+		<div class="status"><p class="floatleft">Freitag, den 12.03.2012</p><p class="floatright">letzte Aktualisierung: 19:25:10</p></div>
+	</header>
+   
+    <div id="links" class="floatleft">
+      <div class="liga">1. Bundesliga Frauen</div>
+      <div class="liga">1. Bundesliga Männer</div>
+      <div class="liga">2. Liga Nord Frauen</div>
+      <div class="liga">2. Liga Süd Frauen</div>
+      <div class="liga">2. Liga Süd Männer</div>
+      <div class="liga active">2. Liga Nord Männer</div>
+   </div>
+   <div class="desktop_kategorie">
+      <div class="header"><h3>Übersicht blueicons 1</h3></div>
+  		
+   </div>
+
+</body>

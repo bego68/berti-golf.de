@@ -1,0 +1,970 @@
+
+
+html{
+   height: 							480px !important;
+   font-family:         		    Helvetica, Verdana, Arial, Tahoma, San Serif;
+   color: 			 				#444;
+   font-size:						13px;
+   line-height:						18px;
+   padding:							0px;
+   margin:							0px;
+   width:                          320px !important;
+}
+
+body{
+    background: 					#222;
+   margin:							0px;
+}
+
+p,h1,h2,h3,ul{
+	margin:							0px;
+	padding:						3px;
+	-webkit-margin-before: 0em;
+-webkit-margin-after: 0em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+}
+
+h1{
+	font-size:						28px;
+  line-height:						40px;
+  font-weight: 						bold;
+ }
+
+a{ 
+	color: 							#fff;
+	text-decoration:				none;
+	-webkit-transition: 			all 0.5s ease-out;
+	-moz-transition: 				all 0.5s ease-out;
+	transition: 					all 0.5s ease-out;
+}
+a:hover{
+	color: 							#cc170a;
+
+}
+
+
+.clearboth{
+	clear:both;
+}
+
+.table{
+	display:						table;
+	width:							100%;
+}
+.tr{
+	display:						table-row;
+}
+.td{
+	display:						table-cell;
+}	
+
+.font_12px{
+	font-size:						12px;
+}
+valign_bottom{
+	vertical-align:					bottom;
+	}
+	
+valign_top{
+	vertical-align:					top;
+	}
+
+.rot{
+	color:							#dd0000;	
+}
+.gelb{
+	color:							#FFCF00;	
+}
+
+/** *************************************************************************** */ 
+/* Hauptlayer                                                            */
+/* *************************************************************************** **/
+
+#main, .ui-content{
+	
+  	background: 					#222; 
+  	min-height: 					350px;
+  	padding:						0px;
+}
+
+#links{
+   position:						absolute;
+   left:							0px;
+   height:							100%;
+   width: 							220px;
+   padding:							10px;
+}
+
+
+
+/** *************************************************************************** */ 
+/* Buttons Header                                                                      */
+/* *************************************************************************** **/
+
+
+#globalheader { 
+	
+	background:						url(images/top_navi_background.png);
+	padding:						0px;
+	overflow:						hidden;
+	height:							45px !important;
+}
+li{ 
+	display:        				inline-block;
+	
+}
+#globalheader li a{ 
+	display:						block;
+	height:							44px;
+	
+}
+
+
+.top_left_nav{
+	    position:					absolute;
+	    left:						0px;
+	    top:						0px;
+		background:					url(images/top_navi_left_arrow.png);
+		width:						49px;
+		height:						44px;
+	
+	}
+.top_right_nav{
+		position:					absolute;
+	    right:						0px;
+		top:						0px;
+		background:					url(images/top_navi_right_arrow.png);
+		width:						49px;
+		height:						44px;
+	
+	}
+	
+.top_nav_1blm{
+		background:					url(images/1blm.png) no-repeat center center;
+		width:						155px;
+		height:						44px;
+		padding:					0px;
+	
+	}
+	
+.top_nav_1blf{
+		background:					url(images/1blf.png) no-repeat center center;
+		width:						155px;
+		height:						44px;
+		padding:					0px;
+	
+	}
+	
+	
+.top_nav_2blsf{
+		background:					url(images/2blsf.png) no-repeat center center;
+		width:						76px;
+		height:						44px;
+		padding:					0px;
+	
+	}	
+	
+.top_nav_2blsm{
+		background:					url(images/2blsm.png) no-repeat center center;
+		width:						76px;
+		height:						44px;
+		padding:					0px;
+	
+}	
+
+.top_nav_2blnf{
+		background:					url(images/2blsf.png) no-repeat center center;
+		width:						76px;
+		height:						44px;
+		padding:					0px;
+	
+	}	
+	
+.top_nav_2blnm{
+		background:					url(images/2blsm.png) no-repeat center center;
+		width:						76px;
+		height:						44px;
+		padding:					0px;
+	
+}	
+
+
+
+
+.logobar{
+ 	background:							url(images/logo_bar_ohne_titel_mit_logo.png);
+ 	color:								#333;
+	font-size:							17px;
+	line-height: 						22px;
+	padding:  							3px 3px 3px 30px;
+	text-align:							center;
+	font-weight:						normal;
+	}
+
+}
+
+
+
+.floatleft{
+	float:							left;
+}
+
+.floatright{
+	float:							right;
+}
+
+.versteckt{
+	display:						none;
+	}
+
+
+
+
+/** *************************************************************************** */ 
+/* Header                                                                       */
+/* *************************************************************************** **/
+
+header, .ui-header{
+
+  width:						320px;
+  						
+}
+
+.bodylifeticker .ui-page
+{
+	background:					url(images/newsletter_background.png) no-repeat fixed;	
+}
+.bodytabelle .ui-page
+{
+	background:					url(images/background_01.png)no-repeat fixed  0px 20px;	
+}
+
+.bodypress .ui-page
+{
+	background:					url(images/background_03.png) no-repeat fixed 0px 20px;
+}
+
+.bodyspielplan .ui-page
+{
+	background:					url(images/background_02.png) no-repeat fixed 0px 20px;
+}
+
+.bodynews .ui-page
+{
+	background:					url(images/background_07.png) no-repeat fixed 0px 20px;	
+}
+	
+/** *************************************************************************** */ 
+/* Content                                                                       */
+/* *************************************************************************** **/
+.ui-content{
+	background:				transparent;
+	}
+/** *************************************************************************** */ 
+/* Tabelle                                                                       */
+/* *************************************************************************** **/
+.tabelle{
+	width:							320px;
+	background:						#fff; 
+	opacity:						0.9;
+	font-size:						13px;
+}
+	
+.tabelle table{
+	table-layout:fixed;
+	width:							100%;
+	height:							100%;
+	border-spacing:					0px;
+	background:						#eee;
+	opacity:						0.9;
+}
+.tabelle  td{
+	border-bottom:						1px solid rgba(200, 200, 200, 0.25);
+	border-left:					1px solid rgba(200, 200, 200, 0.25);
+	text-align:						center;
+	padding:						1px 3px;
+	min-height:							14px;
+	overflow:						hidden;
+	white-space:nowrap;
+}
+
+.tabelle .dvlTableHead td{
+	font-weight:					bold;
+	background:						#444;
+	background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(37,37,37,1) 1%,rgba(67,67,67,1) 2%,rgba(59,59,59,1) 3%,rgba(45,45,45,1) 4%,rgba(22,22,22,1) 48%,rgba(21,21,21,1) 49%,rgba(7,7,7,1) 51%,rgba(0,0,0,1) 52%,rgba(0,0,0,1) 99%,rgba(0,0,0,0.6) 100%); /* Chrome10+,Safari5.1+ */
+	color:							#fff;
+	padding:						3px;
+	border-bottom:					1px solid rgba(100, 100, 100, 0.25);
+	border-left:					1px solid rgba(100, 100, 100, 0.25);
+}
+
+
+
+.odd td{
+	background:						#fff;
+	color:							#444;
+}
+
+.even td{
+	background:						#eee;
+	color:							#222;
+}
+
+
+
+td.dvlTeams{
+	width: 							160px;
+	text-align:						left;
+	
+	}
+
+
+td.dvlPlatz{
+	width:							20px;
+	text-align:						right;
+	
+}
+
+td.dvlBaelle{
+	width:							50px;
+	
+}
+.tabelle th:first-child,
+.tabelle td:first-child {
+	border-left:					0px solid rgba(230, 240, 255, 0.25);
+	
+}
+/** *************************************************************************** */ 
+/* Startseite                                                                       */
+/* *************************************************************************** **/
+
+.startheader{
+	display:						block;
+	width:							320px;
+	height:							25px;
+	margin:							25px 0px  0px 0px;
+	
+	padding:						0px 0px;
+	font-size:						32px;
+	font-weight:					normal;
+	text-align:						center;
+	color:							#fff;
+	text-shadow:					1px 1px #444;
+
+	}
+
+.start_button{
+	display:						inline-block;
+	width:							131px;
+	height:							56px;
+	margin:							25px 0px  0px 18px;
+	
+	padding:						10px 0px;
+	font-size:						14px;
+	font-weight:					bold;
+	text-align:						center;
+	opacity:						0.8;
+	}
+.start_button a.ui-link{
+	color:							#fff;
+	display:						block;
+	width:							131px;
+	height:							76px;
+	
+}
+
+#button_start_1blf{
+	background:						url(images/button_BF.png) no-repeat;
+	}
+
+#button_start_1blm{
+	background:						url(images/button_BM.png) no-repeat;
+}
+
+#button_start_2blnf{
+	background:						url(images/button_BNF.png) no-repeat;
+	}
+#button_start_2blnm{
+	background:						url(images/button_BNM.png) no-repeat;
+	}
+	
+#button_start_2blsf{
+	background:						url(images/button_BSF.png) no-repeat;
+	}
+#button_start_2blsm{
+	background:						url(images/button_BSM.png) no-repeat ;
+	}
+
+
+
+/** *************************************************************************** */ 
+/* footer                                                                       */
+/* *************************************************************************** **/
+.ui-footer{
+	background:						url(images/bottom_navi_bacground.png);
+	padding:						0px;
+	overflow:						hidden;
+	height:							49px;
+	
+}
+
+.ul_footer li{
+	width:							60px;
+							
+}
+
+.ul_footer .lifeticker{
+	background:						url(images/lifeticker.png) top center no-repeat ;
+}	
+	
+.ul_footer .lifetickeraktiv{
+	background:						url(images/lifeticker_on.png) top center no-repeat ;
+}	
+	
+
+.ul_footer .tabelle{
+	background:						url(images/tabelle.png) top center no-repeat ;
+}	
+	
+.ul_footer .tabelleaktiv{
+	background:						url(images/tabelle_on.png) top center no-repeat ;
+}	
+
+.ul_footer .spielplan{
+	background:						url(images/spieplan.png) top center no-repeat ;
+}	
+	
+.ul_footer .spielplanaktiv{
+	background:						url(images/spieplan_on.png) top center no-repeat ;
+}
+
+.ul_footer .news{
+	background:						url(images/news.png) top center no-repeat ;
+}	
+	
+.ul_footer .newsaktiv{
+	background:						url(images/news_on.png) top center no-repeat ;
+}	
+
+.ul_footer .presse{
+	background:						url(images/presse.png) top center no-repeat ;
+}	
+	
+.ul_footer .presseaktiv{
+	background:						url(images/presse_on.png) top center no-repeat ;
+}
+
+
+
+.ul_footer li a{
+	width:							58px;
+	padding-top:					30px;
+	display:						block;
+	color:							#eee !important;
+	font-size:						9px;
+	text-align:						center;
+}
+	
+
+
+
+
+
+/** *************************************************************************** */ 
+/* Ticker                                                                      */
+/* *************************************************************************** **/
+.ticker1{
+	background:						#444;
+	}
+
+ .ticker_spiel{
+ 	display:						block;
+ 	background:  					url(images/ticker_bar_background.png); /* W3C */
+  	width:							316px;
+  	height:							56px;
+  	padding:                        2px;
+  	margin:                         0px;
+  	overflow:						hidden;
+ 
+ }
+.ticker_spiel header{ 
+	display:						block;
+   	width:							310px;
+  	min-width:                      220px;
+  	height:							50px;
+  	padding:                        5px;
+  	margin:                         0px;
+  	color:                          #fff; 
+  	background:               transparent;
+}
+
+    
+
+    .vi_links{
+    margin:							0px 0px 0px 0px;
+    float:                          left;
+    }
+    
+    .vi_rechts{
+    margin:							0px 0px 0px 0px;
+    float:                           right;
+    }
+    .ticker_spiel .table{
+    	margin-top:					10px;
+    }
+    
+    .ticker_spiel .td{
+    	font-size:					18px;
+    	text-align:					center;
+    	padding:					1px;
+    	height:						20px;
+    
+    }
+    .ticker_spiel .rechts,
+    .ticker_spiel .links{
+    	width:						50px;
+    	font-size:                  16px;
+    	
+}
+
+/** *************************************************************************** */ 
+/* Presse                                                                       */
+/* *************************************************************************** **/
+
+.presse #main{
+	background-color:				#fff;
+	opacity:						0.9;
+}
+.presse .article{
+	display:						block;
+ 	background:  					url(images/presse_bar_background.png); /* W3C */
+  	width:							316px;
+  	height:							56px;
+  	padding:                        2px;
+  	margin:                         0px;
+  	overflow:						hidden;
+  	opacity:						0.9;
+}
+.presse .article p{
+	padding:						0px;	
+}
+
+.presse .article .date{
+	height:							18px;	
+	overflow:						hidden;
+	font-size:						10px;
+	color:							#444;
+}
+
+.presse .article a{
+	display:						block;
+	color:							#138EE7;
+	font-weight:					bold;	
+	height:							18px;	
+	overflow:						hidden;
+}
+
+/** *************************************************************************** */ 
+/* News                                                                       */
+/* *************************************************************************** **/
+
+.news {
+	background-color:				#fff;
+	opacity:						0.9;
+	color:							#444;
+}
+
+/** *************************************************************************** */ 
+/* Spielplan                                                                       */
+/* *************************************************************************** **/
+
+.ergebnis {
+	background-color:				#fff;
+	opacity:						0.9;
+	color:							#444;
+}
+.ergebnis #main{
+	background-color:				#fff;
+	opacity:						0.9;
+}
+.ergebnis .dvlSheduleHead{
+	font-weight:					bold;
+	background:						#444;
+	background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(37,37,37,1) 1%,rgba(67,67,67,1) 2%,rgba(59,59,59,1) 3%,rgba(45,45,45,1) 4%,rgba(22,22,22,1) 48%,rgba(21,21,21,1) 49%,rgba(7,7,7,1) 51%,rgba(0,0,0,1) 52%,rgba(0,0,0,1) 99%,rgba(0,0,0,0.6) 100%); /* Chrome10+,Safari5.1+ */
+	color:							#fff;
+	padding:						3px;
+	
+	}
+.ergebnis table{
+	table-layout:fixed;
+	width:							100%;
+	height:							100%;
+	border-spacing:					0px;
+	background:						#eee;
+	opacity:						0.9;
+}
+
+
+.ergebnis  td{
+	border-bottom:					1px solid rgba(200, 200, 200, 0.25);
+	border-left:					1px solid rgba(200, 200, 200, 0.25);
+	text-align:						center;
+	padding:						1px 3px;
+	min-height:						14px;
+	overflow:						hidden;
+	white-space:					wrap;
+	font-size:						11px;
+	
+}
+.ergebnis .dvlOrt,
+.ergebnis .dvlErgebnis{
+	font-size:						9px;
+	width:							100px;
+}
+
+
+/** *************************************************************************** */ 
+/* VereinsIcons                                                                      */
+/* *************************************************************************** **/
+.vereinsicon{
+	 height:							50px;
+	 width:                             50px;
+	 background-image:                  url(icons_vereine_50.png);
+	 display:                           inline-block;
+	}
+
+.vereinsicon_bl1m_3320{
+	background-position: 				0 0;
+	}	
+	
+.vereinsicon_bl1m_3317{
+	background-position: 				-50px 0px;
+	}	
+	
+.vereinsicon_bl1m_3313{
+	background-position: 				-100px 0px;
+	}	
+
+.vereinsicon_bl1m_3314{
+	background-position: 				-150px 0px;
+	}	
+.vereinsicon_bl1m_3312{
+	background-position: 				-200px 0px;
+	}	
+	
+.vereinsicon_bl1m_3316{
+	background-position: 				-250px 0px;
+	}	
+
+.vereinsicon_bl1m_3315{
+	background-position: 				-300px 0px;
+	}	
+.vereinsicon_bl1m_3311{
+	background-position: 				-350px 0px;
+	}	
+	
+.vereinsicon_bl1m_3319{
+	background-position: 				-400px 0px;
+	}	
+
+.vereinsicon_bl1m_3310{
+	background-position: 				-450px 0px;
+	}	
+.vereinsicon_bl1m_3318{
+	background-position: 				-500px 0px;
+	}	
+	
+.vereinsicon_bl1m_12{
+	background-position: 				-550px 0px;
+	}	
+
+.vereinsicon_bl1m_13{
+	background-position: 				-600px 0px;
+	}	
+	
+.vereinsicon_bl1m_14{
+	background-position: 				-650px 0px;
+}
+
+/* 1. Bl Frauen ********************************************************************/  
+.vereinsicon_bl1f_3323{
+	background-position: 				0 -50px;;
+	}	
+	
+.vereinsicon_bl1f_3326{
+	background-position: 				-50px -50px;
+	}	
+	
+.vereinsicon_bl1f_3332{
+	background-position: 				-100px -50px;
+	}	
+
+.vereinsicon_bl1f_3329{
+	background-position: 				-150px -50px;
+	}	
+.vereinsicon_bl1f_3328{
+	background-position: 				-200px -50px;
+	}	
+	
+.vereinsicon_bl1f_3331{
+	background-position: 				-250px -50px;
+	}	
+
+.vereinsicon_bl1f_3333{
+	background-position: 				-300px -50px;
+	}	
+.vereinsicon_bl1f_3325{
+	background-position: 				-350px -50px;
+	}	
+	
+.vereinsicon_bl1f_3324{
+	background-position: 				-400px -50px;
+	}	
+
+.vereinsicon_bl1f_3327{
+	background-position: 				-450px -50px;
+	}	
+.vereinsicon_bl1f_3330{
+	background-position: 				-500px -50px;
+	}	
+	
+.vereinsicon_bl1f_3335{
+	background-position: 				-550px -50px;
+	}	
+
+.vereinsicon_bl1f_3337{
+	background-position: 				-600px -50px;
+	}	
+	
+.vereinsicon_bl1f_3334{
+	background-position: 				-650px -50px;
+}
+
+/* 2 BL Süd Frauen ******************************************************/
+	
+.vereinsicon_bl2sf_3360{
+	background-position: 				0 -100px;;
+	}	
+	
+.vereinsicon_bl2sf_3361{
+	background-position: 				-50px -100px;
+	}	
+	
+.vereinsicon_bl2sf_3357{
+	background-position: 				-100px -100px;
+	}	
+
+.vereinsicon_bl2sf_3355{
+	background-position: 				-150px -100px;
+	}	
+.vereinsicon_bl2sf_3352{
+	background-position: 				-200px -100px;
+	}	
+	
+.vereinsicon_bl2sf_3354{
+	background-position: 				-250px -100px;
+	}	
+
+.vereinsicon_bl2sf_3351{
+	background-position: 				-300px -100px;
+	}	
+.vereinsicon_bl2sf_3350{
+	background-position: 				-350px -100px;
+	}	
+	
+.vereinsicon_bl2sf_3359{
+	background-position: 				-400px -100px;
+	}	
+
+.vereinsicon_bl2sf_3353{
+	background-position: 				-450px -100px;
+	}	
+.vereinsicon_bl2sf_3358{
+	background-position: 				-500px -100px;
+	}	
+	
+.vereinsicon_bl2sf_3356{
+	background-position: 				-550px -100px;
+	}	
+
+.vereinsicon_bl2sf_3349{
+	background-position: 				-600px -100px;
+	}	
+	
+.vereinsicon_bl2sf_14{
+	background-position: 				-650px -100px;
+}
+
+
+	
+/* bl2S Männer ********************************************************************/  
+
+.vereinsicon_bl2sm_3376{
+	background-position: 				0 -150px;;
+	}	
+	
+.vereinsicon_bl2sm_3380{
+	background-position: 				-50px -150px;
+	}	
+	
+
+.vereinsicon_bl2sm_3375{
+	background-position: 				-100px -150px;
+	}	
+.vereinsicon_bl2sm_3383{
+	background-position: 				-150px -150px;
+	}	
+	
+.vereinsicon_bl2sm_3379{
+	background-position: 				-200px -150px;
+	}	
+
+.vereinsicon_bl2sm_3386{
+	background-position: 				-250px -150px;
+	}	
+.vereinsicon_bl2sm_3377{
+	background-position: 				-300px -150px;
+	}	
+	
+.vereinsicon_bl2sm_3382{
+	background-position: 				-350px -150px;
+	}	
+
+.vereinsicon_bl2sm_3381{
+	background-position: 				-400px -150px;
+	}	
+.vereinsicon_bl2sm_3384{
+	background-position: 				-450px -150px;
+	}	
+	
+.vereinsicon_bl2sm_3385{
+	background-position: 				-500px -150px;
+	}	
+
+.vereinsicon_bl2sm_3378{
+	background-position: 				-550px -150px;
+	}	
+	
+.vereinsicon_bl2sm_3322{
+	background-position: 				-600px -150px;
+}
+	
+.vereinsicon_bl2sm_3374{
+	background-position: 				-650px -150px;
+}
+	
+/* bl2N Frauen ********************************************************************/  
+
+.vereinsicon_bl2nf_3342{
+	background-position: 				0 -200px;
+	}	
+	
+.vereinsicon_bl2nf_3338{
+	background-position: 				-50px -200px;
+	}	
+	
+.vereinsicon_bl2nf_3341{
+	background-position: 				-100px -200px;
+	}	
+
+.vereinsicon_bl2nf_3339{
+	background-position: 				-150px -200px;
+	}	
+.vereinsicon_bl2nf_3343{
+	background-position: 				-200px -200px;
+	}	
+	
+.vereinsicon_bl2nf_3347{
+	background-position: 				-250px -200px;
+	}	
+
+.vereinsicon_bl2nf_3340{
+	background-position: 				-300px -200px;
+	}	
+.vereinsicon_bl2nf_3348{
+	background-position: 				-350px -200px;
+	}	
+	
+.vereinsicon_bl2nf_3346{
+	background-position: 				-400px -200px;
+	}	
+
+.vereinsicon_bl2nf_3337{
+	background-position: 				-450px -200px;
+	}	
+.vereinsicon_bl2nf_3344{
+	background-position: 				-500px -200px;
+	}	
+	
+.vereinsicon_bl2nf_3345{
+	background-position: 				-550px -200px;
+	}	
+
+.vereinsicon_bl2nf_13{
+	background-position: 				-600px -200px;
+	}	
+	
+.vereinsicon_bl2nf_14{
+	background-position: 				-650px -200px;
+}
+	
+/* bl2N Männer ********************************************************************/  
+
+.vereinsicon_bl2nm_3362{
+	background-position: 				0 -250px;;
+	}	
+	
+.vereinsicon_bl2nm_3387{
+	background-position: 				-50px -250px;
+	}	
+	
+.vereinsicon_bl2nm_3388{
+	background-position: 				-100px -250px;
+	}	
+
+.vereinsicon_bl2nm_3373{
+	background-position: 				-150px -250px;
+	}	
+.vereinsicon_bl2nm_3368{
+	background-position: 				-200px -250px;
+	}	
+	
+.vereinsicon_bl2nm_3363{
+	background-position: 				-250px -250px;
+	}	
+
+.vereinsicon_bl2nm_3371{
+	background-position: 				-300px -250px;
+	}	
+.vereinsicon_bl2nm_3321{
+	background-position: 				-350px -250px;
+	}	
+	
+.vereinsicon_bl2nm_3370{
+	background-position: 				-400px -250px;
+	}	
+
+.vereinsicon_bl2nm_3364{
+	background-position: 				-450px -250px;
+	}	
+.vereinsicon_bl2nm_3365{
+	background-position: 				-500px -250px;
+	}	
+	
+.vereinsicon_bl2nm_3372{
+	background-position: 				-550px -250px;
+	}	
+
+.vereinsicon_bl2nm_3366{
+	background-position: 				-600px -250px;
+	}	
+	
+.vereinsicon_bl2nm_3367{
+	background-position: 				-650px -250px;	
+	
+}
+
+.vereinsicon_bl2nm_3369{
+	background-position: 				-700px -250px;	
+}	

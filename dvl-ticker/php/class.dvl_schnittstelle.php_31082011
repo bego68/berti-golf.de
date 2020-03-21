@@ -1,0 +1,421 @@
+<?php
+/***************************************************************
+*  Copyright notice
+*
+*  (c) 2011 Berti Golf <berti@golf-net.de>
+*  All rights reserved
+*
+*  The GNU General Public License can be found at
+*  http://www.gnu.org/copyleft/gpl.html.
+*
+*  This script is distributed in the hope that it will be useful,
+*  but WITHOUT ANY WARRANTY; without even the implied warranty of
+*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*  GNU General Public License for more details.
+*
+*  This copyright notice MUST APPEAR in all copies of the script!
+***************************************************************/
+/**
+ * [CLASS/FUNCTION INDEX of SCRIPT]
+ *
+ * Hint: use extdeveval to insert/update function index above.
+ */
+
+
+
+/**
+ * Plugin 'DVL Schnittstelle' for the 'dvlschnittstelle' extension.
+ *
+ * @author	Berti Golf <berti@golf-net.de>
+ * 
+ * @package	dvl_schnittstelle
+ */
+class dvl_schnittstelle{
+
+	
+	private $kennung='';
+	private $team;
+	private $vtage;
+	private $ntage;
+	private $datum;
+	private $liga;
+	private $url;
+	private $adresse = 'http://interface.dvl-datenbank.de/givemedata.php';
+	private $tmpdir  = "/tmp/";
+	
+	/**
+	 * The main method of the PlugIn
+	 *
+	 * @param	string		$kennung: Kennung für die Schnittstelle
+	 * @return	The content that is displayed on the website
+	 */
+	function __construct($liga='bl1m', $team=NULL,$vtage=NULL,$ntage=NULL,$datum=null,$ntage=NULL,$url = Null,  $kennunng = '9O73V49Ys6') {
+		
+		$this->kennung = $kennunng;
+		
+	    $this->liga = $liga; 
+	      
+	    $this->team	 = $team;
+	    $this->vtage = $vtage;
+	    $this->ntage = $ntage;
+	    $this->datum = $datum;
+	    if (!isset($this->datum))  $this->datum = strftime('%d.%m.%Y');
+	    $this->url   = $url;
+
+	}   
+	  
+	
+	/**
+	 * The main method of the PlugIn
+	 *
+	 * @param	string		$content: The PlugIn content
+	 * @param	array		$conf: The PlugIn configuration
+	 * @return	The content that is displayed on the website
+	 */
+	function getUrl($starttag="<body>" ) {
+		$contents = file_get_contents($this->url);
+		if ($contents){
+		        $ersetze= array($starttag, "</body>", "</html>",'<font color="#01499B">','</font>');
+
+			$contents =  str_replace($ersetze, "", stristr($starttag,'<body>'));
+			
+			if (!mb_check_encoding($contents, 'UTF-8')) {
+				$contents = utf8_encode( $contents );
+			}
+		}
+		else{
+			 $contents = 'falsche URL';
+		}
+		return $contents;
+	}
+	
+	
+	function xmlLeagueTable() 
+	{
+		$i 			= 1;
+        $adresse	= $this->adresse;
+        $kennung	= $this->kennung;
+        $liga		= $this->liga;
+        $team		= $this->team;
+		
+		$adresse	= $adresse."?kennung=".$kennung."&job=tabelle&liga=".$liga;
+		
+		$DVL		= simplexml_load_file($adresse);
+			
+					
+		/* Ausgabe der Daten */
+		$content =  "";
+		
+		/* Tabellenkopf */
+		$content .=  "<table>	<tr class='dvlEinzelplatz dvlTableHead'>";
+		$content .=  "		<td class=' dvlPlatz'></td>";
+		$content .=  "		<td class='dvlTeams'>Mannschaft</td>";
+		$content .=  "		<td class='dvlSpiele'>Anz.</td>";
+		$content .=  "		<td class='dvlPunkte'>Pkt</td>";
+		$content .=  "		<td class='dvlSaetze'>S&auml;tze</td>";
+		$content .=  "		<td class='dvlBaelle'>B&auml;lle</td>";
+		$content .=  "	</tr>";
+		
+		/* Einzelplätze */
+		foreach ($DVL->einzelplatz as $result)
+		{
+			if ($i % 2 == 0)
+			{
+				$class = "even";
+			}
+			else
+			{
+				$class = "odd";
+			}
+			if (strtolower($result->mannschaft) == strtolower($team)) 
+			{
+				$class = $class.' myTeam';
+			}
+			$content .=  "	<tr class='dvlEinzelplatz $class'>";
+			$content .=  "		<td class='dvlPlatz'>$result->platz</td>";
+			$content .=  "		<td class='dvlTeams'>$result->mannschaft</td>";
+			$content .=  "		<td class='dvlSpiele'>$result->spiele</td>";
+			$content .=  "		<td class='dvlPunkte'>$result->punkte</td>";
+			$content .=  "		<td class='dvlSaetze'>$result->saetze</td>";
+			$content .=  "		<td class='dvlBaelle'>$result->baelle</td>";
+			$content .=  "	</tr>";
+			$i++;
+		}	
+		$content .=  "	<tr class='dvlEinzelplatz dvlTableHead'>";
+		$content .=  "		<td class=' dvlPlatz'></td>";
+		$content .=  "		<td class='dvlTeams'></td>";
+		$content .=  "		<td class='dvlSpiele'></td>";
+		$content .=  "		<td class='dvlPunkte'></td>";
+		$content .=  "		<td class='dvlSaetze'></td>";
+		$content .=  "		<td class=' dvlBaelle'></td>";
+		$content .=  "	</tr>";
+		$content .=  "</table>";
+	
+	   return $content;
+	}
+
+	
+	/* xmlTeamResults: Funktion zur Ausgabe von Spielergebnissen eines Teams */
+	
+	function xmlTeamResults() 
+	{
+		$i 			= 1;
+		$adresse	= $this->adresse;
+     	$kennung	= $this->kennung;
+        $team		= $this->team;
+		/* Prüfung auf Temporäre Datei */
+		
+		
+		/* Laden der XML-Datei der DVL */
+		$adresse	= $adresse."?kennung=".$kennung."&job=ergebnisse&mannschaft=".$team;
+		$DVL		= simplexml_load_file($adresse);
+			
+		
+		/* Ausgabe der Daten */
+
+		/* Einzelergebnisse */
+		$content .=  "";
+		foreach ($DVL->einzelergebnis as $result)
+		{
+			if ($i % 2 == 0)
+			{
+				$class = "even";
+			}
+			else
+			{
+				$class = "odd";
+			}
+			if ($result->ergebnis != '0:0')
+			{
+				$erg	= explode(":",$result->ergebnis);
+				if ($erg[0]>$erg[1] & strtolower($result->heim) == strtolower($team))
+				{
+					$class = $class." won";
+				}
+				elseif ($erg[0]<$erg[1] & strtolower($result->gast) == strtolower($team))
+				{
+					$class = $class." won";
+				}
+				else
+				{
+					$class = $class." lost";
+				}
+				$content .=  "<table>	<tr class='dvlEinzelergebnis $class'>";
+				$content .=  "		<td class='dvlDatum'>$result->datum<br /> $result->spielbeginn Uhr</td>";
+				$content .=  "		<td class='dvlTeams'><strong>$result->heim</strong><br /> <strong>$result->gast</strong></td>";
+				$content .=  "		<td class='dvlErgebnis'><strong>$result->ergebnis</strong> ($result->satz1, $result->satz2, $result->satz3";
+				if ($result->satz4 != '0:0') $content .=  ", $result->satz4";
+				if ($result->satz5 != '0:0') $content .=  ", $result->satz5";
+				$content .=  ") - ";
+				$content .=  "$result->gesamtdauer min / $result->zuschauer Zuschauer";
+				$content .=  "		</td>";
+				$content .=  "	</tr></table>";
+			}
+			elseif ($result->ergebnis == '0:0' & $i == 1)
+			{
+				$content .=  "<div class='dvlEinzelergebnis $class'>Es liegen keine Ergebnisse vor!</div>";
+			}
+			$i++;
+			
+		}	
+		$content .=  "";
+		return $content;
+	}
+	
+	/* xmlLeagueShedule: Funktion zur Ausgabe von Spielergebnissen einer Liga zu einem Datum */
+	
+	function xmlLeagueShedule($template="") 
+	{ 
+
+				
+		$content 	= '';
+		$i 			= 1;
+		$adresse	= $this->adresse;
+        $kennung	= $this->kennung;
+        $liga		= $this->liga;
+        $datum		= $this->datum;
+        $vtage		= $this->vtage;
+        $ntage		= $this->ntage;
+        $team		= $this->team;
+		/* Datum -> Timestamp */
+		$datumTS		= strtotime($datum);
+		
+		/* Anzahl der Tage vor dem Termin */
+		if (!isset($vtage)) $vtage = 3;
+		
+		/* Anzahl der Tage nach dem Termin */
+		if (!isset($ntage)) $ntage = 3;
+		
+		/* Summe Tage */
+		$tage = $vtage + $ntage + 1;
+		$content	= '';
+		for ($j=0;$j<$tage;$j++) 
+		{
+			
+			
+			$sdatum	= mktime(0, 0, 0, date("m",$datumTS)  , date("d",$datumTS)-$vtage+$j, date("Y",$datumTS));
+			$ddatum = date("d.m.Y",$sdatum);
+			
+			$adresse	= $adresse."?kennung=".$kennung."&job=ergebnisse&liga=".$liga."&datum=".$ddatum;
+			$DVL		= simplexml_load_file($adresse);
+			
+			
+			/* Ausgabe der Daten */
+			
+			if (!empty($DVL)) 
+			{
+				$date = new DateTime();
+ 
+				setlocale(LC_TIME, "de_DE");
+				
+				foreach ($DVL->einzelergebnis as $result)
+				{                   
+					$html 		='"'.$result->spielnr.'": {  "html":"'. $template.'",    "last_update": '.$date->getTimestamp().'   }';
+					
+					if ($result->ergebnis != '0:0')
+					{
+						
+					}
+					elseif ($result->ergebnis == '0:0')
+					{
+						$html = str_replace ('###LIGA###',$liga, $html );
+						$html = str_replace ('###SPIELNR###',$result->spielnr, $html );
+						$html = str_replace ('###STATS###',$result->datum.' '.$result->spielbeginn.' Uhr',$html );
+						$html = str_replace ('###AKTERGEBNIS###',$result->ergebnis, $html );
+						$html = str_replace ('###HOME###',$result->heim, $html );
+						$html = str_replace ('###HOMEID###',$result->heimid, $html );
+						$result->heimkurz= substr($result->heim,0,7).'..';
+						$html = str_replace ('###HOMESHORT###',$result->heimkurz, $html );
+						$html = str_replace ('###GUEST###',$result->gast, $html );
+						$html = str_replace ('###GUESTID###',$result->gastid, $html );
+						$result->gastkurz= substr($result->gast,0,7).'..';
+						$html = str_replace ('###GUESTSHORT###',$result->gastkurz, $html );
+						
+						$html = str_replace ('###Set1Home###','0', $html );
+						$html = str_replace ('###Set1Guest###','0', $html );
+						$html = str_replace ('###Set2Home###','0', $html );
+						$html = str_replace ('###Set2Guest###','0', $html );
+						$html = str_replace ('###Set3Home###','0', $html );
+						$html = str_replace ('###Set3Guest###','0', $html );
+						$html = str_replace ('###Set4Home###','0', $html );
+						$html = str_replace ('###Set4Guest###','0', $html );
+						$html = str_replace ('###Set5Home###','0', $html );
+						$html = str_replace ('###Set5Guest###','0', $html );
+						
+						
+						
+						$html = str_replace ('###Spectators###',$result->zuschauer, $html );
+						$html = str_replace ('###time###',$result->gesamtdauer, $html );
+						//$html = utf8_encode ($html);
+						
+					}
+					$i++;
+					if ($content=='') {
+						$content = ' {  '.$html; 
+       				} 
+                    else {
+                     	$content .= ' ,  '.$html;
+                    }
+				}	
+				
+			
+			}
+			
+         }
+        if ($content!='') { $content .= ' }  '; } else { $content .= '""';} 
+		return $content;
+	}
+
+	/* xmlTeamShedule: Funktion zur Ausgabe von Spielplan mit Ergebnissen eines Teams */
+	
+	function xmlTeamShedule($anzahl=NULL) 
+	{
+		$i 			= 1;
+		$j 			= 1;
+		$adresse	= $this->adresse;
+        $kennung	= $this->kennung;
+        $team		= $this->team;
+
+		/* Prüfung auf Temporäre Datei */
+		
+		
+		$DVL		= simplexml_load_file($adresse);
+		
+				
+		/* Ausgabe der Daten */
+
+		/* Einzelergebnisse */
+		$content .=  "<table>";
+		foreach ($DVL->einzelergebnis as $result)
+		{
+			if ($i % 2 == 0)
+			{
+				$class = "even";
+			}
+			else
+			{
+				$class = "odd";
+			}
+			
+			if ($j==1 & $result->ergebnis == '0:0')
+			{
+				$class = $class." next";
+			}
+			
+			if ($result->ergebnis != '0:0' & !isset($anzahl))
+			{
+				$erg	= explode(":",$result->ergebnis);
+				if ($erg[0]>$erg[1] & strtolower($result->heim) == strtolower($team))
+				{
+					$class = $class." won";
+				}
+				elseif ($erg[0]<$erg[1] & strtolower($result->gast) == strtolower($team))
+				{
+					$class = $class." won";
+				}
+				else
+				{
+					$class = $class." lost";
+				}
+				$content .=  "	<tr class='dvlEinzelergebnis $class'>";
+				$content .=  "		<td class='dvlDatum'>$result->datum<br /> $result->spielbeginn Uhr</td>";
+				$content .=  "		<td class='dvlTeams'><strong>$result->heim</strong> vs. <strong>$result->gast</strong></td>";
+				$content .=  "		<td class='dvlErgebnis'><strong>$result->ergebnis</strong> ($result->satz1, $result->satz2, $result->satz3";
+				if ($result->satz4 != '0:0') $content .=  ", $result->satz4";
+				if ($result->satz5 != '0:0') $content .=  ", $result->satz5";
+				$content .=  ") - ";
+				$content .=  "$result->gesamtdauer min / $result->zuschauer Zuschauer";
+				$content .=  "		</td>";
+				$content .=  "	</tr>";
+			}
+			elseif ($result->ergebnis == '0:0' & (!isset($anzahl) or $anzahl == 0))
+			{
+				$content .=  "	<tr class='dvlEinzelergebnis $class'>";
+				$content .=  "		<td class='dvlDatum'>$result->datum<br /> $result->spielbeginn Uhr</td>";
+				$content .=  "		<td class='dvlTeams'><strong>$result->heim</strong> vs. <strong>$result->gast</strong></td>";
+				$content .=  "		<td class='dvlOrt'>$result->spielhalle ($result->hallenort)</td>";
+				$content .=  "	</tr>";
+				$j++;
+			}
+			elseif ($result->ergebnis == '0:0')
+			{
+				if ($j <= $anzahl)
+				{
+					$content .=  "	<tr class='dvlEinzelergebnis $class'>";
+					$content .=  "		<td class='dvlDatum'>$result->datum<br /> $result->spielbeginn Uhr</td>";
+					$content .=  "		<td class='dvlTeams'><strong>$result->heim</strong> vs. <strong>$result->gast</strong></td>";
+					$content .=  "		<td class='dvlOrt'>$result->spielhalle ($result->hallenort)</td>";
+					$content .=  "	</tr>";
+					$j++;
+				}
+			}
+			$i++;
+			
+		}	
+		$content .=  "</table>";
+		return $content;
+	}
+	
+}
+
+?>

@@ -1,0 +1,21 @@
+/* Luftigeres Spalten-Layout */
+body {
+  line-height: 2;
+}
+.container {
+  width: 768px;
+}
+header, section, footer {
+  margin-top: 1.75em;
+  margin-bottom: 1.75em;
+}
+
+
+/* Styles des Canvas-Elements */
+canvas {
+  border: 4px solid #EEE;
+  margin: 1em 0;
+}
+canvas.active {
+  border-color: green;
+}

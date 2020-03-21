@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<cooliris-quick version="1.0">
+  <src>^http\:\/\/www\.berti\-golf\.de\/bertichile\/desierto\/(.+?)\_tn\.jpg$</src>
+  <dst>http://www.berti-golf.de/bertichile/desierto/{1}.jpg</dst>
+</cooliris-quick>

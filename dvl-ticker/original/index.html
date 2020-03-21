@@ -1,0 +1,644 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>DVL 2011/2012 lifeticker</title> 
+	<meta charset=utf-8 />
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" /> 
+	<link rel="stylesheet" href="jquery.mobile-1.0b3.css" />
+	<script type="text/javascript" src="jquery-1.6.2.min.js"></script>
+	<script type="text/javascript" src="jquery.mobile-1.0b3.js"></script>
+	<link rel="stylesheet" href="dvl-ticker.css" type="text/css" media="screen,projection" />
+	
+</head> 
+<body class="bodylifeticker"> 
+
+<!-- Start of loading page -->
+<div data-role="page" id="loading" onclick="">
+
+	
+</div><!-- /page -->
+
+<!-- Start of loading page -->
+<div data-role="page" id="email" onclick="">
+	<div data-role="header" >
+		<p class="logobar">Volleyball Bundesliga 2011/2012</p>
+		
+	</div>
+	<div data-role="content" style="min-height: 400px; "  >
+		<h2>Anmeldung zum Newsletter</h2>
+		<p>Hier können Sie sich zum Newsletter anmelden!Zum Anmelden geben Sie unten Ihre Email-Adresse ein!</p>
+		<form id="newsletter_form" action="#email_submit" method="post">
+			<input type="text" id="email" name="email" placeholder="IhreEmail@email.de" value="" />
+			<input class="anmelden" type="submit" value="&nbsp;"/>
+		</form>
+		<p class="alignright"><a href="#start">Nein, Danke!</a></p>
+	</div><!-- /page -->
+</div><!-- /page -->
+
+<!-- Start of loading page -->
+<div data-role="page" id="email_submit" onclick="">
+	<div data-role="header" >
+		<p class="logobar">Volleyball Bundesliga 2011/2012</p>
+		
+	</div>
+	<div data-role="content" style="min-height: 400px; "  >
+		<h2>Danke für Ihre Anmeldung</h2>
+		<p>Sie haben sich erfolgreich für den Newsletter angemeldet. Sie erhalten demnächst eine Bestättigungsemail!<br />&nbsp;</p>
+		
+		<p ><a id="losgehts" href="#start">&nbsp;</a></p>
+	</div><!-- /page -->
+</div><!-- /page -->
+
+
+<!-- Start of first page -->
+<div data-role="page" id="start">
+ 
+	<div data-role="header" >
+	<!--	<ul id="globalheader">
+			<li class="top_left_nav"><a href="#2blnm">&nbsp;</a> </li>
+			<li class="top_nav_1blm" ><a href="#1blm">&nbsp;</a> </li>
+			<li class="top_nav_1blf" ><a href="#1blf">&nbsp;</a> </li>
+			<li class="top_right_nav"><a href="#1blm">&nbsp;</a></li>
+		</ul>/ header -->
+		<p class="logobar">Volleyball Bundesliga 2011/2012</p>
+		
+	</div>
+
+	<div data-role="content" style="min-height: 400px; "  >
+	   <div class="startheader">Lifeticker</div>
+	   <div id="button_start_1blf" class="start_button"><a href="#1blf"></a></div>
+	   <div id="button_start_1blm" class="start_button"><a href="#1blm"></a></div>
+	   <div id="button_start_2blsf" class="start_button"><a href="#2blsf"></a></div>
+	   <div id="button_start_2blsm" class="start_button"><a href="#2blsm"></a></div>
+	   <div id="button_start_2blnf" class="start_button"><a href="#2blnf"></a></div>
+	   <div id="button_start_2blnm" class="start_button"><a href="#2blnm"></a></div>
+	  
+	</div><!-- /content -->
+
+	<div data-role="footer" id="footer1">
+		<ul class="ul_footer">
+			<li class="lifetickeraktiv"><a>Live-Ticker</a> </li>
+			<li class="tabelle"><a rel="external" href="tabelle.html">Tabelle</a> </li>
+			<li class="spielplan" ><a rel="external" href="spielplan.html">Spielplan</a> </li>
+			<li class="presse"><a rel="external" href="presse.html">Presse</a></li>
+			<li class="news" ><a rel="external" href="news.html">News</a> </li>
+		</ul>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<!-- Start of Ticker 1. BL Männer page -->
+<div data-role="page" id="1blm" data-position="fixed">
+
+	<div data-role="header" >
+		<ul id="globalheader" style="padding:0px;">
+			<li class="top_left_nav"><a href="#2blnm">&nbsp;</a> </li>
+			<li class="top_nav_2blnm" ><a href="#2blnm">&nbsp;</a> </li>
+			<li class="top_nav_1blm_aktiv" ><p>1. Bundesliga Männer</p></li>
+			<li class="top_nav_1blf" style="width: 76px;background-position: left;"><a href="#1blf">&nbsp;</a> </li>
+			<li class="top_right_nav" ><a href="#1blf">&nbsp;</a></li>
+		</ul>
+		
+	</div><!-- /header -->
+
+	<div data-role="content" class="ticker" id="ticker_article_1blm">
+	  <article class="ticker_spiel border_red" id="ticker_1003"> 
+   		     <header> <div class="vereinsicon vereinsicon_bl1m_3310 vi_links" title="CV Mitteldeutschland"></div>      <div class="vereinsicon vereinsicon_bl1m_3312 vi_rechts" title="evivo Düren"></div>         
+	   		      <div class="stats">23.10.10 15.30h</div>    		      
+	   		      <div class="satzergebnis">20  <span class="font_12px">4</span> 16</div>  
+	   		      <div class="statistik_button"><b>2</b> <a onclick="$(&quot;#statistik_1003&quot;).show(&quot;slow&quot;);" class="statistik_aktiv">&nbsp;</a> <b>1</b> </div>
+	   		      <div class="clearboth bg_rot_duenn_grad"></div>        
+   		      </header>  <div> 
+   		      <div class="schalter beide_off">
+   		      		<div id='stat_button_3310' class="home_button_off">CV Mitteldeutschland</div><div id='stat_button_3312' class="guest_button_off">evivo Düren</div>
+   		      </div>
+   		      <div class="table">   
+   		      
+   		      	<div class="tr"> 
+   		        	<div class="td links" title="CV Mitteldeutschland"><b>MD</b></div>  
+   		         	<div class="td">25&nbsp; <span class="font_10px">1</span> &nbsp;21</div>   
+   		         	<div class="td rechts" title="evivo Düren"><b>evivo</b></div>    
+   		         </div>   
+   		         <div class="tr">   
+   		         	<div class="td links"></div>   
+	   		         <div class="td">21&nbsp; <span class="font_10px">2</span> &nbsp;25</div>   
+	   		         <div class="td rechts"></div>  
+	   		     </div>  
+   		         <div class="tr">   <div class="td links"></div>   
+   		         	<div class="td">25&nbsp; <span class="font_10px">3</span> &nbsp;17</div>   
+   		         	<div class="td rechts"></div>  
+   		         	
+   		         </div>  
+   		         <div class="tr">   
+   		         	<div class="td links"><span class="font_10px">Zuschauer: </span></div>   
+   		         	<div class="td">20&nbsp; <span class="font_10px">4</span> &nbsp;16</div>   
+   		         	<div class="td rechts"><span class="font_10px">Dauer: </span></div>  
+   		         </div>  
+   		         <div class="tr">
+   		            <div class="td links">950</div>   
+   		            <div class="td">0&nbsp; <span class="font_10px">5</span> &nbsp;0</div>   
+   		            <div class="td rechts">112</div>  </div> </div>  
+   		         </div>  
+   		       </article>
+   		       
+   		       
+	            <div id="statistik_1003"  class="statistik versteckt" onclick='$("#statistik_1003").hide();'> 
+			     	  <table class="home"> 
+				   		  <thead> 
+				   		  	<tr> 
+	   		  		<th rowspan="2" colspan="2" class="topleftborderradius">evivo Düren</th> 
+	   		  		
+	   		  		<th colspan="1">P</th> 
+	   		  		<th colspan="3">Aufschlag</th> 
+	   		  		<th colspan="3">Annahme</th> 
+	   		  		<th colspan="3">Angriff</th> 
+	   		  		<th colspan="1" class="toprightborderradius">Block</th> 
+	   		  		
+	   		  	</tr> 
+	   		  	<tr> 
+	   		  		
+	   		  		
+	   		  		<th>&#8721;</th> 
+	   		  		<th >&#8721;</th><th >F</th><th >P</th> 
+	   		  		<th>&#8721;</th><th>F</th><th>Exc.</th> 
+	   		  		<th>&#8721;</th><th>P.</th><th>P</th> 
+	   		  		<th>Pkt</th> 
+	   		  		
+	   		  	</tr> 
+				   		  </thead> 
+				   		  <tbody> 
+				   		  
+				   		  	<tr class="even"> 
+				   		  	  <td>1</td><td>Cyvas Haroldas</td> 
+				   		  		
+				   		  		<td>0</td> 
+				   		  		<td>1</td><td >0</td><td>0</td> 
+				   		  		<td>0</td><td>0</td><td>0%(0)</td> 
+				   		  		<td>0</td><td>0</td><td>0%</td> 
+				   		  		<td>0</td> 
+				   		  	</tr> 
+				   		  
+				   		  	<tr class="odd"> 
+				   		  	  <td>4</td><td>Langer Christian</td> 
+				   		  		 
+				   		  		<td>8</td> 
+				   		  		<td>15</td><td >0</td><td>0</td> 
+				   		  		<td>1</td><td>0</td><td>100%(1)</td> 
+				   		  		<td>10</td><td>3</td><td>30%</td> 
+				   		  		<td>5</td> 
+				   		  	</tr> 
+				   		  
+				   		  	<tr class="even"> 
+				   		  	  <td>6</td><td>Hähner Sebastian</td> 
+				   		  		 
+				   		  		<td>0</td> 
+				   		  		<td>0</td><td >0</td><td>0</td> 
+				   		  		<td>0</td><td>0</td><td>0%(0)</td> 
+				   		  		<td>0</td><td>0</td><td>0%</td> 
+				   		  		<td>0</td> 
+				   		  	</tr> 
+				   		  
+				   		  	<tr class="odd"> 
+				   		  	  <td>7</td><td>Metelski Roman</td> 
+				   		  		
+				   		  		<td>0</td> 
+				   		  		<td>0</td><td >0</td><td>0</td> 
+				   		  		<td>0</td><td>0</td><td>0%(0)</td> 
+				   		  		<td>0</td><td>0</td><td>0%</td> 
+				   		  		<td>0</td> 
+				   		  	</tr> 
+				   		  
+				   		  	<tr class="even"> 
+				   		  	  <td>8</td><td>Helbig Christoph</td> 
+				   		  		
+				   		  		<td>12</td> 
+				   		  		<td>11</td><td >4</td><td>0</td> 
+				   		  		<td>0</td><td>0</td><td>0%(0)</td> 
+				   		  		<td>27</td><td>8</td><td>30%</td> 
+				   		  		<td>4</td> 
+				   		  	</tr> 
+				   		  
+				   		  	<tr class="odd"> 
+				   		  	  <td>9</td><td>Ehrhardt Enrico</td> 
+				   		  	 
+				   		  		<td>0</td> 
+				   		  		<td>0</td><td >0</td><td>0</td> 
+				   		  		<td>0</td><td>0</td><td>0%(0)</td> 
+				   		  		<td>0</td><td>0</td><td>0%</td> 
+				   		  		<td>0</td> 
+				   		  	</tr> 
+				   		  
+				   		  	<tr class="even"> 
+				   		  	  <td>11</td><td>Mayer Peter</td> 
+				   		  	
+				   		  		<td>1</td> 
+				   		  		<td>1</td><td >0</td><td>0</td> 
+				   		  		<td>1</td><td>1</td><td>0%(0)</td> 
+				   		  		<td>1</td><td>1</td><td>100%</td> 
+				   		  		<td>0</td> 
+				   		  	</tr> 
+				   		  
+				   		  	<tr class="odd"> 
+				   		  	  <td>13</td><td>Knebelkamp Tomas</td> 
+				   		  		
+				   		  		<td>0</td> 
+				   		  		<td>0</td><td >0</td><td>0</td> 
+				   		  		<td>34</td><td>0</td><td>38%(13)</td> 
+				   		  		<td>0</td><td>0</td><td>0%</td> 
+				   		  		<td>0</td> 
+				   		  	</tr> 
+				   		  
+				   		  	<tr class="even"> 
+				   		  	  <td>14</td><td>Kühner Sebastian</td> 
+				   		  	
+				   		  		<td>10</td> 
+				   		  		<td>19</td><td >6</td><td>1</td> 
+				   		  		<td>0</td><td>0</td><td>0%(0)</td> 
+				   		  		<td>7</td><td>5</td><td>71%</td> 
+				   		  		<td>4</td> 
+				   		  	</tr> 
+				   		  
+				   		  	<tr class="odd"> 
+				   		  	  <td>15</td><td>Siebeck Mark</td> 
+				   		  	
+				   		  		<td>19</td> 
+				   		  		<td>22</td><td >0</td><td>3</td> 
+				   		  		<td>20</td><td>3</td><td>45%(9)</td> 
+				   		  		<td>31</td><td>16</td><td>52%</td> 
+				   		  		<td>0</td> 
+				   		  	</tr> 
+				   		  
+				   		  	<tr class="even"> 
+				   		  	  <td>16</td><td>Stolfa Jiri</td> 
+				   		  		
+				   		  		<td>7</td> 
+				   		  		<td>17</td><td >2</td><td>0</td> 
+				   		  		<td>27</td><td>1</td><td>44%(12)</td> 
+				   		  		<td>20</td><td>6</td><td>30%</td> 
+				   		  		<td>1</td> 
+				   		  	</tr> 
+				   		  
+				   		  	<tr class="odd"> 
+				   		  	  <td>18</td><td>Augustyn Artur Bartosz</td> 
+				   		  
+				   		  		<td>19</td> 
+				   		  		<td>16</td><td >3</td><td>1</td> 
+				   		  		<td>0</td><td>0</td><td>0%(0)</td> 
+				   		  		<td>17</td><td>16</td><td>94%</td> 
+				   		  		<td>2</td> 
+				   		  	</tr> 
+				   		  
+				   		  	<tr class="summe"> 
+				   		  	  <td></td><td>TEAM</td> 
+				   		  		
+				   		  		<td>76</td> 
+				   		  		<td>102</td><td >15</td><td>5</td> 
+				   		  		<td>83</td><td>5</td><td>42%(35)</td> 
+				   		  		<td>113</td><td>55</td><td>49%</td> 
+				   		  		<td>16</td> 
+				   		  	</tr> 
+				   		  	
+				   		  </tbody>    
+				   		  
+			   		  </table> 
+			   		 
+   		  <div>&nbsp;</div> 
+   		  <table class="guest"> 
+	   		  <thead> 
+	   		  	<tr> 
+	   		  		<th rowspan="2" colspan="2" class="topleftborderradius">evivo Düren</th> 
+	   		  		
+	   		  		<th colspan="1">P</th> 
+	   		  		<th colspan="3">Aufschlag</th> 
+	   		  		<th colspan="3">Annahme</th> 
+	   		  		<th colspan="3">Angriff</th> 
+	   		  		<th colspan="1" class="toprightborderradius">Block</th> 
+	   		  		
+	   		  	</tr> 
+	   		  	<tr> 
+	   		  		
+	   		  		
+	   		  		<th>&#8721;</th> 
+	   		  		<th >&#8721;</th><th >F</th><th >P</th> 
+	   		  		<th>&#8721;</th><th>F</th><th>Exc.</th> 
+	   		  		<th>&#8721;</th><th>P.</th><th>P</th> 
+	   		  		<th>Pkt</th> 
+	   		  		
+	   		  	</tr> 
+	   		  </thead> 
+	   		  <tbody> 
+	   		  	 
+	   		  	<tr class="even"> 
+	   		  	  <td>1</td><td>Nongny Olivier</td> 
+	   		  		 
+	   		  		<td>6</td> 
+	   		  		<td>9</td><td >1</td><td>1</td> 
+	   		  		<td>1</td><td>0</td><td>0%(0)</td> 
+	   		  		<td>8</td><td>4</td><td>50%</td> 
+	   		  		<td>1</td> 
+	   		  	</tr> 
+	   		  
+	   		  	<tr class="odd"> 
+	   		  	  <td>2</td><td>Krüger Merten</td> 
+	   		  		 
+	   		  		<td>0</td> 
+	   		  		<td>2</td><td >0</td><td>0</td> 
+	   		  		<td>0</td><td>0</td><td>0%(0)</td> 
+	   		  		<td>0</td><td>0</td><td>0%</td> 
+	   		  		<td>0</td> 
+	   		  	</tr> 
+	   		  
+	   		  	<tr class="even"> 
+	   		  	  <td>3</td><td>Isaak Felix</td> 
+	   		  		
+	   		  		<td>1</td> 
+	   		  		<td>6</td><td >0</td><td>0</td> 
+	   		  		<td>0</td><td>0</td><td>0%(0)</td> 
+	   		  		<td>3</td><td>1</td><td>33%</td> 
+	   		  		<td>0</td> 
+	   		  	</tr> 
+	   		  
+	   		  	<tr class="odd"> 
+	   		  	  <td>4</td><td>Eichbaum Christoph</td> 
+	   		  		
+	   		  		<td>11</td> 
+	   		  		<td>21</td><td >2</td><td>0</td> 
+	   		  		<td>27</td><td>0</td><td>41%(11)</td> 
+	   		  		<td>22</td><td>11</td><td>50%</td> 
+	   		  		<td>0</td> 
+	   		  	</tr> 
+	   		  
+	   		  	<tr class="even"> 
+	   		  	  <td>7</td><td>Hübner Stefan</td> 
+	   		  		
+	   		  		<td>0</td> 
+	   		  		<td>0</td><td >0</td><td>0</td> 
+	   		  		<td>0</td><td>0</td><td>0%(0)</td> 
+	   		  		<td>0</td><td>0</td><td>0%</td> 
+	   		  		<td>0</td> 
+	   		  	</tr> 
+	   		  
+	   		  	<tr class="odd"> 
+	   		  	  <td>8</td><td>Tunchev Petko</td> 
+	   		  		
+	   		  		<td>0</td> 
+	   		  		<td>0</td><td >0</td><td>0</td> 
+	   		  		<td>0</td><td>0</td><td>0%(0)</td> 
+	   		  		<td>0</td><td>0</td><td>0%</td> 
+	   		  		<td>0</td> 
+	   		  	</tr> 
+	   		  
+	   		  	<tr class="even"> 
+	   		  	  <td>9</td><td>Kracht Nikolai</td> 
+	   		  		
+	   		  		<td>0</td> 
+	   		  		<td>0</td><td >0</td><td>0</td> 
+	   		  		<td>0</td><td>0</td><td>0%(0)</td> 
+	   		  		<td>0</td><td>0</td><td>0%</td> 
+	   		  		<td>0</td> 
+	   		  	</tr> 
+	   		  
+	   		  	<tr class="odd"> 
+	   		  	  <td>10</td><td>Dünnes Christian</td> 
+	   		  		 
+	   		  		<td>21</td> 
+	   		  		<td>11</td><td >2</td><td>0</td> 
+	   		  		<td>17</td><td>4</td><td>24%(4)</td> 
+	   		  		<td>32</td><td>19</td><td>59%</td> 
+	   		  		<td>2</td> 
+	   		  	</tr> 
+	   		  
+	   		  	<tr class="even"> 
+	   		  	  <td>12</td><td>Kohl Fabian</td> 
+	   		  		> 
+	   		  		<td>0</td> 
+	   		  		<td>0</td><td >0</td><td>0</td> 
+	   		  		<td>41</td><td>1</td><td>32%(13)</td> 
+	   		  		<td>0</td><td>0</td><td>0%</td> 
+	   		  		<td>0</td> 
+	   		  	</tr> 
+	   		  
+	   		  	<tr class="odd"> 
+	   		  	  <td>13</td><td>Wiederschein Ilja</td> 
+	   		  		 
+	   		  		<td>3</td> 
+	   		  		<td>13</td><td >4</td><td>2</td> 
+	   		  		<td>1</td><td>0</td><td>0%(0)</td> 
+	   		  		<td>3</td><td>0</td><td>0%</td> 
+	   		  		<td>1</td> 
+	   		  	</tr> 
+	   		  
+	   		  	<tr class="even"> 
+	   		  	  <td>14</td><td>Zachrich Jaromir</td> 
+	   		  		
+	   		  		<td>6</td> 
+	   		  		<td>16</td><td >1</td><td>0</td> 
+	   		  		<td>0</td><td>0</td><td>0%(0)</td> 
+	   		  		<td>7</td><td>5</td><td>71%</td> 
+	   		  		<td>1</td> 
+	   		  	</tr> 
+	   		  
+	   		  	<tr class="odd"> 
+	   		  	  <td>16</td><td>Olieman Michael</td> 
+	   		  		 
+	   		  		<td>18</td> 
+	   		  		<td>19</td><td >4</td><td>2</td> 
+	   		  		<td>0</td><td>0</td><td>0%(0)</td> 
+	   		  		<td>33</td><td>16</td><td>48%</td> 
+	   		  		<td>0</td> 
+	   		  	</tr> 
+	   		  
+	   		  	<tr class="summe"> 
+	   		  	  <td></td><td>TEAM</td> 
+	   		  		
+	   		  		<td>66</td> 
+	   		  		<td>97</td><td >14</td><td>5</td> 
+	   		  		<td>87</td><td>5</td><td>32%(28)</td> 
+	   		  		<td>108</td><td>56</td><td>52%</td> 
+	   		  		<td>5</td> 
+	   		  	</tr> 
+	   		  	
+	   		  </tbody>    
+	   		  
+   		  </table> 
+   		 
+	</div> 
+	</div><!-- /content -->
+
+	<div data-role="footer" id="footer1">
+		<ul class="ul_footer">
+			<li class="lifetickeraktiv"><a>Live-Ticker</a> </li>
+			<li class="tabelle"><a rel="external" href="tabelle.html#1blm">Tabelle</a> </li>
+			<li class="spielplan" ><a rel="external" href="spielplan.html#1blm">Spielplan</a> </li>
+			<li class="presse"><a rel="external" href="presse.html#1blm">Presse</a></li>
+			<li class="news" ><a rel="external" href="news.html#1blm">News</a> </li>
+		</ul>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<!-- Start of Ticker 1. BL Frauen page -->
+<div data-role="page" id="1blf" data-position="fixed">
+    <div data-role="header" >
+		<ul id="globalheader">
+			<li class="top_left_nav"><a href="#1blm">&nbsp;</a> </li>
+			<li class="top_nav_1blm" style="width: 76px;background-position: right;"><a href="#1blm">&nbsp;</a> </li>
+			<li class="top_nav_1blf_aktiv" >1. Bundesliga Frauen</li>
+			<li class="top_nav_2blsf" ><a href="#2blsf">&nbsp;</a> </li>
+			<li class="top_right_nav"><a href="#2blsf">&nbsp;</a></li>
+		</ul>
+				
+		
+	</div><!-- /header -->
+
+	<div data-role="content" class="ticker" id="ticker_article_1blf">
+	  
+	  
+	</div><!-- /content -->
+
+	<div data-role="footer" id="footer1">
+		<ul class="ul_footer">
+			<li class="lifetickeraktiv"><a>Live-Ticker</a> </li>
+			<li class="tabelle"><a rel="external" href="tabelle.html#1blf">Tabelle</a> </li>
+			<li class="spielplan" ><a rel="external" href="spielplan.html#1blf">Spielplan</a> </li>
+			<li class="presse"><a rel="external" href="presse.html#1blf">Presse</a></li>
+			<li class="news" ><a rel="external" href="news.html#1blf">News</a> </li>
+		</ul>
+	</div><!-- /footer -->
+	  
+</div><!-- /page -->
+
+<!-- Start of Ticker 2. BL Süd Frauen page -->
+<div data-role="page" id="2blsf" data-position="fixed">
+    <div data-role="header" >
+		<ul id="globalheader">
+			<li class="top_left_nav" ><a href="#1blf">&nbsp;</a> </li>
+			<li class="top_nav_1blf" style="width:114px; background-position: right;"><a href="#1blf">&nbsp;</a> </li>
+			<li class="top_nav_2blsf_aktiv" >2. BL S F</li>			
+			<li class="top_nav_2blsm" ><a href="#2blsm">&nbsp;</a> </li>
+			<li class="top_nav_2blnf" style="width:38px; background-position: left;"><a href="#2blnf">&nbsp;</a> </li>
+			<li class="top_right_nav"><a href="#2blsm">&nbsp;</a></li>
+		</ul>
+		
+	</div><!-- /header -->
+
+	<div data-role="content" class="ticker" id="ticker_article_2blsf">
+	  
+	  
+	</div><!-- /content -->
+
+	<div data-role="footer" id="footer1">
+		<ul class="ul_footer">
+			<li class="lifetickeraktiv"><a>Live-Ticker</a> </li>
+			<li class="tabelle"><a  rel="external" href="tabelle.html#2blsf">Tabelle</a> </li>
+			<li class="spielplan" ><a  rel="external" href="spielplan.html#2blsf">Spielplan</a> </li>
+			<li class="presse"><a  rel="external" href="presse.html#2blsf">Presse</a></li>
+			<li class="news" ><a  rel="external" href="news.html#2blsf">News</a> </li>
+		</ul>
+	</div><!-- /footer -->
+	
+</div><!-- /page -->
+
+<!-- Start of Ticker 2. BL Süd Männer page -->
+<div data-role="page" id="2blsm" data-position="fixed">
+    <div data-role="header" >
+		<ul id="globalheader">
+			<li class="top_left_nav"><a href="#2blsf">&nbsp;</a> </li>
+			<li class="top_nav_1blf" style="width:38px; background-position: right;"><a href="#1blf">&nbsp;</a> </li>
+			<li class="top_nav_2blsf"><a href="#2blsf">&nbsp;</a> </li>
+			<li class="top_nav_2blsm_aktiv" >2. BL S M</li>
+			<li class="top_nav_2blnf"><a href="#2blnf">&nbsp;</a> </li>		
+			<li class="top_nav_2blnm" style="width:38px; background-position: left;"><a href="#2blnm">&nbsp;</a> </li>
+			<li class="top_right_nav" ><a href="#2blnf">&nbsp;</a></li>
+		</ul>
+		
+	</div><!-- /header -->
+
+	<div data-role="content" class="ticker" id="ticker_article_2blsm">
+	  
+	  
+	</div><!-- /content -->
+
+	<div data-role="footer" id="footer1">
+		<ul class="ul_footer">
+			<li class="lifetickeraktiv"><a>Live-Ticker</a> </li>
+			<li class="tabelle"><a  rel="external" href="tabelle.html#2blsm">Tabelle</a> </li>
+			<li class="spielplan" ><a  rel="external" href="spielplan.html#2blsm">Spielplan</a> </li>
+			<li class="presse"><a  rel="external" href="presse.html#2blsm">Presse</a></li>
+			<li class="news" ><a  rel="external" href="news.html#2blsm">News</a> </li>
+		</ul>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<!-- Start of Ticker 2. BL Nord Frauen page -->
+<div data-role="page" id="2blnf" data-position="fixed">
+     <div data-role="header" >
+		<ul id="globalheader">
+			<li class="top_left_nav"><a href="#2blsm">&nbsp;</a> </li>
+			<li class="top_nav_2blsf" style="width:38px; background-position: right;"><a href="#2blsf">&nbsp;</a> </li>
+			<li class="top_nav_2blsm"><a href="#2blsm">&nbsp;</a> </li>
+			<li class="top_nav_2blnf_aktiv" >2. BL N F</li>
+			<li class="top_nav_2blnm"><a href="#2blnm">&nbsp;</a> </li>		
+			<li class="top_nav_1blm" style="width:38px; background-position: left;"><a href="#1blm">&nbsp;</a> </li>
+			<li class="top_right_nav"><a href="#2blnm">&nbsp;</a></li>
+		</ul>
+		
+	</div><!-- /header -->
+
+	<div data-role="content" class="ticker" id="ticker_article_2blnf">
+	  
+	  
+	</div><!-- /content -->
+
+	<div data-role="footer" id="footer1">
+		<ul class="ul_footer">
+			<li class="lifetickeraktiv"><a>Live-Ticker</a> </li>
+			<li class="tabelle"><a  rel="external" href="tabelle.html#2blnf">Tabelle</a> </li>
+			<li class="spielplan" ><a  rel="external" href="spielplan.html#2blnf">Spielplan</a> </li>
+			<li class="presse"><a  rel="external" href="presse.html#2blnf">Presse</a></li>
+			<li class="news" ><a  rel="external" href="news.html#2blnf">News</a> </li>
+		</ul>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<!-- Start of Ticker 2. BL Nord Männer page -->
+<div data-role="page" id="2blnm" data-position="fixed">
+   <div data-role="header" >
+		<ul id="globalheader">
+			<li class="top_left_nav"><a href="#2blnf">&nbsp;</a> </li>
+			<li class="top_nav_2blsm" style="width:38px; background-position: right;"><a href="#2blsm">&nbsp;</a> </li>
+			<li class="top_nav_2blnf"><a href="#2blnf">&nbsp;</a> </li>
+			<li class="top_nav_2blnm_aktiv" >2. BL N M</li>
+			<li class="top_nav_1blm" style="width:114px; background-position: left;"><a href="#1blm">&nbsp;</a> </li>
+			<li class="top_right_nav"><a href="#1blm">&nbsp;</a></li>
+		</ul>
+		
+	</div><!-- /header -->
+
+	<div data-role="content" class="ticker" id="ticker_article_2blnm">
+	  
+	  
+	</div><!-- /content -->
+
+	<div data-role="footer" id="footer1">
+		<ul class="ul_footer">
+			<li class="lifetickeraktiv"><a>Live-Ticker</a> </li>
+			<li class="tabelle"><a  rel="external" href="tabelle.html#2blnm">Tabelle</a> </li>
+			<li class="spielplan" ><a  rel="external" href="spielplan.html#2blnm">Spielplan</a> </li>
+			<li class="presse"><a  rel="external" href="presse.html#2blnm">Presse</a></li>
+			<li class="news" ><a  rel="external" href="news.html#2blnm">News</a> </li>
+		</ul>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+
+
+
+<script src="dvl-ticker.js" type="text/javascript" > </script>
+<script>
+ladeDaten.erstelleTicker();
+var tabelleAktiv = window.setInterval("ladeDaten.erstelleTicker()", 300000);
+
+</script>
+</body>
+</html>

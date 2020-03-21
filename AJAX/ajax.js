@@ -1,0 +1,3 @@
+$("#ajaxcontent").css({
+	"background": "yellow"
+});

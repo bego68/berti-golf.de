@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <meta name="viewport" content="width=320; user-scalable=no" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+            <title>PhoneGap</title>
+            <link rel="stylesheet" href="/master.css" type="text/css" media="screen" title="no title" charset="utf-8">
+                <script type="text/javascript" charset="utf-8" src="phonegap.1.0.0.js"></script>
+                <script type="text/javascript" src="jquery.1.6.2.min.js"></script>
+                <script type="text/javascript" charset="utf-8">
+                    alert(device.phonegap);
+                    $(document).bind("deviceready", function() { 
+                                     
+                                     setupToolbars();
+                                     });
+                    
+                    var toprated=0;
+                    var recents=0;
+                    var history=0;
+                    
+                    function setupToolbars() {
+                        window.uicontrols.createToolBar();
+                        window.uicontrols.setToolBarTitle("A Title");
+                        
+                        window.uicontrols.createTabBar();
+                        
+                        var toprated = 0;
+                        window.uicontrols.createTabBarItem("toprated", "Top Rated", "tabButton:TopRated", {
+                                                           onSelect: function() {
+                                                           navigator.notification.alert("Top Rated selected");
+                                                           window.uicontrols.updateTabBarItem("toprated", { badge: ++toprated });
+                                                           }
+                                                           });
+                        
+                        var recents = 0;
+                        window.uicontrols.createTabBarItem("recents", "Recents", null, {
+                                                           onSelect: function() {
+                                                           navigator.notification.alert("Recents selected");
+                                                           window.uicontrols.updateTabBarItem("recents", { badge: ++recents });
+                                                           }
+                                                           });
+                        
+                        var history = 0;
+                        window.uicontrols.createTabBarItem("history", "History", "icon.png", {
+                                                           onSelect: function() {
+                                                           navigator.notification.alert("History selected");
+                                                           window.uicontrols.updateTabBarItem("history", { badge: ++history });
+                                                           }
+                                                           });
+                        
+                        window.uicontrols.createTabBarItem("search", "Search", "tabButton:Search");
+                        window.uicontrols.createTabBarItem("downloads", "Downloads", "tabButton:Downloads");
+                        
+                        window.uicontrols.showTabBar();
+                        window.uicontrols.showTabBarItems("toprated", "recents", "history");
+                    }
+                    
+                    
+                    </script>
+    </head>
+    <body id="stage" class="theme">
+        <div id="Page1">
+            <br><br><br>
+            <h1>The tab bar is kewl!</h1>
+        </div>
+    </body>
+</html>

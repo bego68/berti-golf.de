@@ -1,0 +1,29 @@
+
+.bodylifeticker .ui-page
+{
+	background:					url(images/newsletter_background.png) no-repeat fixed;	
+}
+#loading
+{
+	background:					url(images/DVL_loading_screen.png) no-repeat fixed ;	
+}
+
+.bodytabelle .ui-page
+{
+	background:					url(images/background_01.png)no-repeat fixed  0px 20px;	
+}
+
+.bodypress .ui-page
+{
+	background:					url(images/background_03.png) no-repeat fixed 0px 20px;
+}
+
+.bodyspielplan .ui-page
+{
+	background:					url(images/background_02.png) no-repeat fixed 0px 20px;
+}
+
+.bodynews .ui-page
+{
+	background:					url(images/background_07.png) no-repeat fixed 0px 20px;	
+}

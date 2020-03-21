@@ -1,0 +1,29 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+	<head>
+		<title>jQuery-Tutorial: Ajax</title>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#ajaxcontent").css({
+"width": 200,
+"height": 200,
+"border": "1px solid"
+});
+ 
+$("button").css({
+"display": "block"
+});
+			});
+		</script>
+	</head>
+
+	<body>
+		<button id="ajaxloadlink">Lade ajax.php mit load()</button>
+		<button id="ajaxgetlink">Lade ajax.php mit get()</button>
+		<button id="ajaxpostlink">Lade ajax.php mit post()</button>
+		<button id="ajaxlink">Lade ajax.php mit ajax()</button>
+		<button id="ajaxscriptlink">Lade script.js mit getScript()</button>
+		<div id="ajaxcontent"></div>
+	</body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>HTML5Stagram</title>
+<link rel="stylesheet" href="lib/vendor/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="app.css">
+<script src="lib/vendor/hacks.js"></script>
+
+
+<div class="container">
+
+
+<header>
+  <h1>HTML5Stagram</h1>
+</header>
+
+
+<section id="Main">
+
+<canvas id="Dropzone"></canvas>
+<p>
+  <input disabled id="Record" class="btn" type="button" value="Webcam aufnehmen">
+</p>
+
+
+<p>
+
+  <label>
+    Kontrast:<br>
+    <input disabled id="Contrast" type="number" min="-100" max="100" value="0"
+      data-default="0">
+  </label>
+
+  <label>
+    Sättigung:<br>
+    <input disabled id="Saturation" type="number" min="-100" max="100" value="0"
+      data-default="0">
+  </label>
+
+  <label>
+    Sepia:<br>
+    <input disabled id="Sepia" type="number" min="-100" max="100" value="0"
+      data-default="0">
+  </label>
+
+</p>
+
+<p>
+  <input disabled id="Save" class="btn btn-primary" type="button" value="Speichern">
+  <input disabled id="Delete" class="btn btn-danger" type="button" value="Löschen">
+</p>
+
+</section>
+
+
+<footer>
+  © 2012 HTML5Stagram
+</footer>
+
+
+</div> <!-- Ende .container -->
+
+
+<script data-main="app.js" src="lib/vendor/require.js"></script>

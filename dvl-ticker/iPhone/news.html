@@ -1,0 +1,159 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>DVL 2011/2012 - Spielplan</title> 
+	<meta charset=utf-8 />
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" /> 
+	<link rel="stylesheet" href="jquery.mobile-1.0b3.css" />
+	<script type="text/javascript" src="jquery-1.6.2.min.js"></script>
+	<script type="text/javascript" src="jquery.mobile-1.0b3.js"></script>
+	<link rel="stylesheet" href="dvl-ticker.css" type="text/css" media="screen,projection" />
+	
+</head> 
+<body class="bodynews"> 
+
+<!-- Start of first page -->
+<div data-role="page" id="#start" >
+
+	<div data-role="header" >
+	<!--	<ul id="globalheader">
+			<li class="top_left_nav"><a href="#2blnm">&nbsp;</a> </li>
+			<li class="top_nav_1blm" ><a href="#1blm">&nbsp;</a> </li>
+			<li class="top_nav_1blf" ><a href="#1blf">&nbsp;</a> </li>
+			<li class="top_right_nav"><a href="#1blm">&nbsp;</a></li>
+		</ul>/ header -->
+		<p class="logobar">Volleyball Bundesliga 2011/2012</p>
+		
+	</div>
+
+	<div data-role="content" style="min-height: 385px; " >
+	    <div class="startheader">DVL News</div>
+	   <div id="button_start_1blf" class="start_button"><a href="#1blf"></a></div>
+	   <div id="button_start_1blm" class="start_button"><a href="#1blm"></a></div>
+	   <div id="button_start_2blsf" class="start_button"><a href="#2blsf"></a></div>
+	   <div id="button_start_2blsm" class="start_button"><a href="#2blsm"></a></div>
+	   <div id="button_start_2blnf" class="start_button"><a href="#2blnf"></a></div>
+	   <div id="button_start_2blnm" class="start_button"><a href="#2blnm"></a></div>
+	</div><!-- /content -->
+
+</div><!-- /page -->
+
+
+<!-- Start of Ticker 1. BL Männer page -->
+<div data-role="page" id="1blm" data-position="fixed">
+
+	<div data-role="header" >
+			<ul id="globalheader" style="padding:0px;">
+			<li class="top_left_nav"><a href="#2blnm">&nbsp;</a> </li>
+			<li class="top_nav_2blnm" ><a href="#2blnm">&nbsp;</a> </li>
+			<li class="top_nav_1blm_aktiv" ><p>1. Bundesliga Männer</p></li>
+			<li class="top_nav_1blf" style="width: 76px;background-position: left;"><a href="#1blf">&nbsp;</a> </li>
+			<li class="top_right_nav" ><a href="#1blf">&nbsp;</a></li>
+		</ul>
+		
+	</div><!-- /header -->
+
+	<div data-role="content" class="news" id="news_1blm"></div><!-- /content -->
+
+</div><!-- /page -->
+
+<!-- Start of Ticker 1. BL Frauen page -->
+<div data-role="page" id="1blf" data-position="fixed">
+    <div data-role="header" >
+		<ul id="globalheader">
+			<li class="top_left_nav"><a href="#1blm">&nbsp;</a> </li>
+			<li class="top_nav_1blm" style="width: 76px;background-position: right;"><a href="#1blm">&nbsp;</a> </li>
+			<li class="top_nav_1blf_aktiv" >1. Bundesliga Frauen</li>
+			<li class="top_nav_2blsf" ><a href="#2blsf">&nbsp;</a> </li>
+			<li class="top_right_nav"><a href="#2blsf">&nbsp;</a></li>
+		</ul>
+				
+		
+	</div><!-- /header -->
+
+	<div data-role="content" class="news" id="news_1blf"></div><!-- /content -->
+</div><!-- /page -->
+
+<!-- Start of Ticker 2. BL Süd Frauen page -->
+<div data-role="page" id="2blsf" data-position="fixed">
+    <div data-role="header" >
+		<ul id="globalheader">
+			<li class="top_left_nav" ><a href="#1blf">&nbsp;</a> </li>
+			<li class="top_nav_1blf" style="width:114px; background-position: right;"><a href="#1blf">&nbsp;</a> </li>
+			<li class="top_nav_2blsf_aktiv" >2. BL S F</li>			
+			<li class="top_nav_2blsm" ><a href="#2blsm">&nbsp;</a> </li>
+			<li class="top_nav_2blnf" style="width:38px; background-position: left;"><a href="#2blnf">&nbsp;</a> </li>
+			<li class="top_right_nav"><a href="#2blsm">&nbsp;</a></li>
+		</ul>
+		
+		
+	</div><!-- /header -->
+
+	<div data-role="content" class="news" id="news_2blsf"></div><!-- /content -->
+</div><!-- /page -->
+
+<!-- Start of Ticker 2. BL Süd Männer page -->
+<div data-role="page" id="2blsm" data-position="fixed">
+    <div data-role="header" >
+		<ul id="globalheader">
+			<li class="top_left_nav"><a href="#2blsf">&nbsp;</a> </li>
+			<li class="top_nav_1blf" style="width:38px; background-position: right;"><a href="#1blf">&nbsp;</a> </li>
+			<li class="top_nav_2blsf"><a href="#2blsf">&nbsp;</a> </li>
+			<li class="top_nav_2blsm_aktiv" >2. BL S M</li>
+			<li class="top_nav_2blnf"><a href="#2blnf">&nbsp;</a> </li>		
+			<li class="top_nav_2blnm" style="width:38px; background-position: left;"><a href="#2blnm">&nbsp;</a> </li>
+			<li class="top_right_nav" ><a href="#2blnf">&nbsp;</a></li>
+		</ul>
+		
+	</div><!-- /header -->
+
+	<div data-role="content" class="news" id="news_2blsm"></div><!-- /content -->
+
+</div><!-- /page -->
+
+<!-- Start of Ticker 2. BL Nord Frauen page -->
+<div data-role="page" id="2blnf" data-position="fixed">
+     <div data-role="header" >
+		<ul id="globalheader">
+			<li class="top_left_nav"><a href="#2blsm">&nbsp;</a> </li>
+			<li class="top_nav_2blsf" style="width:38px; background-position: right;"><a href="#2blsf">&nbsp;</a> </li>
+			<li class="top_nav_2blsm"><a href="#2blsm">&nbsp;</a> </li>
+			<li class="top_nav_2blnf_aktiv" >2. BL N F</li>
+			<li class="top_nav_2blnm"><a href="#2blnm">&nbsp;</a> </li>		
+			<li class="top_nav_1blm" style="width:38px; background-position: left;"><a href="#1blm">&nbsp;</a> </li>
+			<li class="top_right_nav"><a href="#2blnm">&nbsp;</a></li>
+		</ul>
+		
+	</div><!-- /header -->
+
+	<div data-role="content" class="news"   id="news_2blnf">
+	  
+	  
+	</div><!-- /content -->
+
+</div><!-- /page -->
+
+<!-- Start of Ticker 2. BL Nord Männer page -->
+<div data-role="page" id="2blnm" data-position="fixed">
+   <div data-role="header" >
+		<ul id="globalheader">
+			<li class="top_left_nav"><a href="#2blnf">&nbsp;</a> </li>
+			<li class="top_nav_2blsm" style="width:38px; background-position: right;"><a href="#2blsm">&nbsp;</a> </li>
+			<li class="top_nav_2blnf"><a href="#2blnf">&nbsp;</a> </li>
+			<li class="top_nav_2blnm_aktiv" >2. BL N M</li>
+			<li class="top_nav_1blm" style="width:114px; background-position: left;"><a href="#1blm">&nbsp;</a> </li>
+			<li class="top_right_nav"><a href="#1blm">&nbsp;</a></li>
+		</ul>
+		
+	</div><!-- /header -->
+
+	<div data-role="content" class="news"  id="news_2blnm">	</div><!-- /content -->
+</div><!-- /page -->
+
+
+<script src="dvl-ticker.js" type="text/javascript" > </script>
+<script>ladeDaten.erstelleNews(); </script>
+
+
+</body>
+</html>

@@ -1,0 +1,763 @@
+@media screen {
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Ubuntu'), url('Ubuntu-Regular.woff') format('woff');
+}
+}
+
+html{
+   height: 							480px !important;
+   font-family:         		     'Ubuntu','Open Sans Condensed', Verdana, Arial, Tahoma, San Serif;
+   color: 			 				#444;
+   font-size:						12px;
+   line-height:						18px;
+   padding:							0px;
+   margin:							0px;
+   width:                          320px !important;
+}
+
+body{
+    background: 					#222;
+   margin:							0px;
+}
+
+p,h1,h2,h3,ul{
+	margin:							0px;
+	padding:						3px;
+	-webkit-margin-before: 0em;
+-webkit-margin-after: 0em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+}
+h1,h2,h3{
+	
+	text-shadow:					1px 1px #3d3d3d;
+}
+h1{
+	font-size:						28px;
+  line-height:						40px;
+  font-weight: 						bold;
+ }
+
+a{ 
+	color: 							#fff;
+	text-decoration:				none;
+	-webkit-transition: 			all 0.5s ease-out;
+	-moz-transition: 				all 0.5s ease-out;
+	transition: 					all 0.5s ease-out;
+}
+a:hover{
+	color: 							#cc170a;
+
+}
+
+
+
+
+.clearboth{
+	clear:both;
+}
+
+.table{
+	display:						table;
+	width:							100%;
+}
+.tr{
+	display:						table-row;
+}
+.td{
+	display:						table-cell;
+}	
+
+.font_12px{
+	font-size:						12px;
+}
+valign_bottom{
+	vertical-align:					bottom;
+	}
+	
+valign_top{
+	vertical-align:					top;
+	}
+
+.rot{
+	color:							#dd0000;	
+}
+.gelb{
+	color:							#FFCF00;	
+}
+
+/** *************************************************************************** */ 
+/* Hauptlayer                                                            */
+/* *************************************************************************** **/
+
+#main, .ui-content{
+	
+  	background: 					#222; 
+  	min-height: 					350px;
+  	padding:						0px;
+}
+
+#links{
+   position:						absolute;
+   left:							0px;
+   height:							100%;
+   width: 							220px;
+   padding:							10px;
+}
+
+
+
+/** *************************************************************************** */ 
+/* Buttons Header                                                                      */
+/* *************************************************************************** **/
+.dvl_button{
+	background:						url(dvl_button.png) transparent no-repeat;
+	width:							28px;
+	height:							28px;
+	padding:						10px 10px 10px 10px;
+	margin:							2px;
+  display:							block;
+  
+   -moz-box-shadow: 				2px 2px 2px #3d3d3d;
+   box-shadow: 						2px 2px 2px #3d3d3d; 
+}
+
+.dvlapp_button{
+	background:						url(dvlapp_button.png) transparent no-repeat;
+	width:							28px;
+	height:							28px;
+	padding:						10px 10px 10px 10px;
+	margin:							2px;
+  display:							block;
+  
+   -moz-box-shadow: 				2px 2px 2px #3d3d3d;
+   box-shadow: 						2px 2px 2px #3d3d3d; 
+}
+
+#globalheader { 
+	
+	padding:       0px;
+	background:#707070;
+    background:
+        -o-linear-gradient(top, rgba(0, 0, 0, .2) 0, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 0) 97%, rgba(0, 0, 0, .45) 100%),
+        -o-linear-gradient(left, rgba(0, 0, 0, .2) 0, rgba(0, 0, 0, 0) .2%, rgba(0, 0, 0, 0) 99.8%, rgba(0, 0, 0, .2) 100%),
+        url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA9QAAAAkCAMAAABfcIIyAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAHVQTFRFAAAA%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F5YtmQAAAACd0Uk5TAAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8gISIjJCUmZiD6WAAAAdlJREFUeF7t3btuFEEQheFzunotGYkIERA4spn3fyeHiAgEEtsXB82s2eEJavR%2F0Wjyo75XWfHpw4MkSXNqCkA2lr2%2B%2Fvz63n15qpI0x5yTSAM52XaxJLVXf%2FkoaY6xQk2sgXy8Ql2KJf3wS5HG6HMMQg3kZNkuxVGKNLxJo48%2BxhxTpBrIx7JcXEqUKJI3zd77CjWLaiAle4U6Iixv6q33MfocTL%2BBlCy7OEqJqCFvs%2FV2m3%2BTaiAd6zb7rlHtrbc1VA%2Bm30BSa%2B%2B7RNSo4a21thbVTL%2BBnCy7rCV1rdXbtbXW%2B%2Bh%2Ft78BZLM2v6NE1Fov%2FrpC3Zl%2BA2l5H6lrrRe%2FXNu%2BqCbUQE57qGvsoW5t9D4H028gJculOKLUWuvFz%2B16O9NipAZSsm8nWpfq53ZlTQ3k9s%2BamlADZ0CogZMh1MDJEGrgZAg1cDL%2Fh5ojLSC1%2ByMtLp8A2R0un3BNFEjv%2FpooDzqA9O4fdPD0Esju8PSSIglAdsciCZQzArI7lDOat30yCg8CGe2FB1eovZcI7oMSwUBSq0TwWlQHxfyBEzgW86ftDpDase0ODfKA7A4N8mhlC2R318r2px%2BeQqLpPJDae9P5%2FmrVz491%2FWekBlKy7PXVfn9rb9xXsMD2wdOcAAAAAElFTkSuQmCC') no-repeat 50% 50%,
+        -o-linear-gradient(bottom, #666 0, #5e5e5e 50%, #707070 51%, #808080 100%)
+    ;
+    background:
+        -moz-linear-gradient(top, rgba(0, 0, 0, .2) 0, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 0) 97%, rgba(0, 0, 0, .45) 100%),
+        -moz-linear-gradient(left, rgba(0, 0, 0, .2) 0, rgba(0, 0, 0, 0) .2%, rgba(0, 0, 0, 0) 99.8%, rgba(0, 0, 0, .2) 100%),
+        url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA9QAAAAkCAMAAABfcIIyAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAHVQTFRFAAAA%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F5YtmQAAAACd0Uk5TAAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8gISIjJCUmZiD6WAAAAdlJREFUeF7t3btuFEEQheFzunotGYkIERA4spn3fyeHiAgEEtsXB82s2eEJavR%2F0Wjyo75XWfHpw4MkSXNqCkA2lr2%2B%2Fvz63n15qpI0x5yTSAM52XaxJLVXf%2FkoaY6xQk2sgXy8Ql2KJf3wS5HG6HMMQg3kZNkuxVGKNLxJo48%2BxhxTpBrIx7JcXEqUKJI3zd77CjWLaiAle4U6Iixv6q33MfocTL%2BBlCy7OEqJqCFvs%2FV2m3%2BTaiAd6zb7rlHtrbc1VA%2Bm30BSa%2B%2B7RNSo4a21thbVTL%2BBnCy7rCV1rdXbtbXW%2B%2Bh%2Ft78BZLM2v6NE1Fov%2FrpC3Zl%2BA2l5H6lrrRe%2FXNu%2BqCbUQE57qGvsoW5t9D4H028gJculOKLUWuvFz%2B16O9NipAZSsm8nWpfq53ZlTQ3k9s%2BamlADZ0CogZMh1MDJEGrgZAg1cDL%2Fh5ojLSC1%2ByMtLp8A2R0un3BNFEjv%2FpooDzqA9O4fdPD0Esju8PSSIglAdsciCZQzArI7lDOat30yCg8CGe2FB1eovZcI7oMSwUBSq0TwWlQHxfyBEzgW86ftDpDase0ODfKA7A4N8mhlC2R318r2px%2BeQqLpPJDae9P5%2FmrVz491%2FWekBlKy7PXVfn9rb9xXsMD2wdOcAAAAAElFTkSuQmCC') no-repeat 50% 50%,
+        -moz-linear-gradient(bottom, #666 0, #5e5e5e 50%, #707070 51%, #808080 100%)
+    ;
+    background:
+        -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0, 0, 0, .2)), color-stop(0.05, rgba(0, 0, 0, 0)), color-stop(0.97, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, .45))),
+        -webkit-gradient(linear, 0 0, 100% 0, from(rgba(0, 0, 0, .2)), color-stop(0.002, rgba(0, 0, 0, 0)), color-stop(0.998, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, .2))),
+        url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA9QAAAAkCAMAAABfcIIyAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAHVQTFRFAAAA%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F5YtmQAAAACd0Uk5TAAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8gISIjJCUmZiD6WAAAAdlJREFUeF7t3btuFEEQheFzunotGYkIERA4spn3fyeHiAgEEtsXB82s2eEJavR%2F0Wjyo75XWfHpw4MkSXNqCkA2lr2%2B%2Fvz63n15qpI0x5yTSAM52XaxJLVXf%2FkoaY6xQk2sgXy8Ql2KJf3wS5HG6HMMQg3kZNkuxVGKNLxJo48%2BxhxTpBrIx7JcXEqUKJI3zd77CjWLaiAle4U6Iixv6q33MfocTL%2BBlCy7OEqJqCFvs%2FV2m3%2BTaiAd6zb7rlHtrbc1VA%2Bm30BSa%2B%2B7RNSo4a21thbVTL%2BBnCy7rCV1rdXbtbXW%2B%2Bh%2Ft78BZLM2v6NE1Fov%2FrpC3Zl%2BA2l5H6lrrRe%2FXNu%2BqCbUQE57qGvsoW5t9D4H028gJculOKLUWuvFz%2B16O9NipAZSsm8nWpfq53ZlTQ3k9s%2BamlADZ0CogZMh1MDJEGrgZAg1cDL%2Fh5ojLSC1%2ByMtLp8A2R0un3BNFEjv%2FpooDzqA9O4fdPD0Esju8PSSIglAdsciCZQzArI7lDOat30yCg8CGe2FB1eovZcI7oMSwUBSq0TwWlQHxfyBEzgW86ftDpDase0ODfKA7A4N8mhlC2R318r2px%2BeQqLpPJDae9P5%2FmrVz491%2FWekBlKy7PXVfn9rb9xXsMD2wdOcAAAAAElFTkSuQmCC') no-repeat 50% 50%,
+        -webkit-gradient(linear, 0 100%, 0 0, from(#666), color-stop(0.5, #5e5e5e), color-stop(0.51, #707070), to(#808080))
+    ;
+}
+#globalheader li {
+	display:         inline-block;
+	width:           43px;
+	padding:		5px 0px;
+	height:           20px;
+	cursor:				pointer ;
+	color:							#f0f0f0;
+	}
+	
+#globalheader  li.active,	
+#globalheader  li:hover,
+#globalheader  li:focus
+ {
+    background: #45484d; /* Old browsers */
+	background: -moz-linear-gradient(top, #45484d 0%, #000000 47%, #45484d 99%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45484d), color-stop(47%,#000000), color-stop(99%,#45484d)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #45484d 0%,#000000 47%,#45484d 99%); /* W3C */
+    background: linear-gradient(top, #45484d 0%,#000000 47%,#45484d 99%); /* W3C */
+}
+
+#globalheader li a{
+  display: 							block;
+  color:							#f0f0f0;
+}
+
+
+
+.floatleft{
+	float:							left;
+}
+
+.floatright{
+	float:							right;
+}
+
+.versteckt{
+	display:						none;
+	}
+
+
+.dvl_stardesmonats{
+	background:						url(dvl_button_stars.png) transparent;
+	width:							129px;
+	height:							73px;
+	padding:						10px 10px 10px 120px;
+	margin:							5px;
+  	display:						block;
+  	-moz-box-shadow: 				5px 5px 5px #3d3d3d;
+  	box-shadow: 					5px 5px 5px #3d3d3d; 
+}
+
+/** *************************************************************************** */ 
+/* Header                                                                       */
+/* *************************************************************************** **/
+
+header, .ui-header{
+text-align:						center;
+  -moz-box-shadow: 				0px 2px 2px #3d3d3d;
+  box-shadow: 					0px 2px 2px #3d3d3d; 
+  -moz-border-radius: 			0px;
+  border-radius: 				0px;   
+  border-bottom:				0px solid #fff;
+  margin:						0px 0px 0px 0px;
+  padding:						0px;
+  height: 						auto;
+  color:                       #444;
+  background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #f0f0f0 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#f6f6f6), color-stop(100%,#f0f0f0)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #ffffff 0%,#f6f6f6 47%,#f0f0f0 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #ffffff 0%,#f6f6f6 47%,#f0f0f0 100%); /* Opera11.10+ */
+background: -ms-linear-gradient(top, #ffffff 0%,#f6f6f6 47%,#f0f0f0 100%); /* IE10+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f0f0f0',GradientType=0 ); /* IE6-9 */
+background: linear-gradient(top, #ffffff 0%,#f6f6f6 47%,#f0f0f0 100%); /* W3C */
+
+  width:						320px;
+  						
+}
+
+.ui-header p,
+header p{
+	color:		#014A9C;
+	font-size:	18px;
+	line-height: 22px;
+	text-shadow: 1px 1px 1px #aaa;
+	padding:  18px;
+	}
+
+
+
+
+/** *************************************************************************** */ 
+/* Ticker                                                                      */
+/* *************************************************************************** **/
+ .ticker_spiel{
+ 	display:						block;
+ 	background:  					url(toolbar.png); /* W3C */
+  	width:							320px;
+  	height:							60px;
+  	padding:                        0px;
+  	margin:                         0px;
+  	overflow:						hidden;
+ 
+ }
+.ticker_spiel header{ 
+	display:						block;
+   	width:							310px;
+  	min-width:                      220px;
+  	height:							50px;
+  	padding:                        5px;
+  	margin:                         0px;
+  	color:                          #fff; 
+  	background:               transparent;
+}
+
+    .satzergebnis{
+    	font-size:					32px;
+        text-shadow:				1px 1px #222;
+        margin-top:					5px;
+    }
+   
+
+    .vi_links{
+    margin:							0px 0px 0px 0px;
+    float:                          left;
+    }
+    
+    .vi_rechts{
+    margin:							0px 0px 0px 0px;
+    float:                           right;
+    }
+    .ticker_spiel .table{
+    	margin-top:					10px;
+    }
+    
+    .ticker_spiel .td{
+    	font-size:					18px;
+    	text-align:					center;
+    	padding:					1px;
+    	height:						20px;
+    
+    }
+    .ticker_spiel .rechts,
+    .ticker_spiel .links{
+    	width:						50px;
+    	font-size:                  16px;
+    	
+    }
+    
+    
+       
+    .startbild{
+     width:							100%;
+    }
+    
+    
+/** *************************************************************************** */ 
+/* Tabelle                                                                      */
+/* *************************************************************************** **/
+
+
+.tabelle{
+	
+	height:							auto;
+	padding:						2px 10px;
+	margin:							0px;
+	font-size:						14px;
+	line-height:					20px;
+	background:						#002244;
+	background: 					-webkit-linear-gradient(top,  #014A9C 0%,#002244 70%,#002244 100%); /* Chrome10+,Safari5.1+ */
+	background: 					-moz-linear-gradient(top,  #014A9C 0%,#002244 70%,#002244 100%); /* Chrome10+,Safari5.1+ */
+	background-repeat:				no-repeat;
+ 	background-position: 				right center;
+	-moz-box-shadow: 				0px 5px 5px #3d3d3d;
+  	box-shadow: 					0px 5px 5px #3d3d3d; 
+  	-webkit-border-radius: 			8px;
+  	-moz-border-radius: 			8px;
+  	border-radius: 					8px;   
+  	border:							1px solid #fff;
+  margin:							20px 0px 10px 0px;
+  padding:							6px 10px;
+  font-size:						11px;
+  line-height:						20px;
+  -webkit-transition: 				all 1s ease-out;
+	-moz-transition: 				all 1s ease-out;
+	transition: 					all 1s ease-out;
+  width:							220px;
+
+}
+
+
+
+.tabelle table{
+	width:							100%;
+	border-spacing:					0px;
+}
+.tabelle tdh{
+	font-weight:					bold;
+}
+.tabelle td{
+	border-top:						1px solid rgba(230, 240, 255, 0.25);
+	border-left:					1px solid rgba(230, 240, 255, 0.25);
+	text-align:						center;
+	padding:							2px;
+}
+.dvlTableHead td{
+	border-top:	                   0px;
+	font-weight:					bold;
+	}
+.tabelle th{
+	border-left:					1px solid rgba(230, 240, 255, 0.25);
+}
+tr{
+	-webkit-transition: 	all 0.6s ease-in-out;
+	-moz-transition: 			all 0.6s ease-in-out;
+	transition: 					all 0.6s ease-in-out;
+  
+}
+tr:hover{
+	color:								#dd0000;
+	background-color:			#fff;
+}
+
+td.dvlTeams,
+.tabelle th:first-child,
+.tabelle td:first-child {
+	border-left:					0px solid rgba(230, 240, 255, 0.25);
+	text-align:						left;
+}
+
+td.dvlapiele,
+td.dvlBaelle{
+	display:                       none;
+}
+
+/** *************************************************************************** */ 
+/* icons                                                                      */
+/* *************************************************************************** **/
+
+.icon{
+	height: 							50px;
+	width:  							50px;
+	-webkit-border-radius: 				8px;
+ 	-moz-border-radius: 				8px;
+  	border-radius: 						8px;   
+  	-webkit-transition:		 				all 1s ease-in-out;
+	-moz-transition: 					all 1s ease-in-out;
+	transition: 						all 1s ease-in-out;
+	cursor:								pointer;
+	float:								left;
+	margin:								5px;
+}
+
+
+
+
+
+/** *************************************************************************** */ 
+/* VereinsIcons                                                                      */
+/* *************************************************************************** **/
+.vereinsicon{
+	 height:							50px;
+	 width:                             50px;
+	 background-image:                  url(icons_vereine_50.png);
+	 display:                           inline-block;
+	}
+
+.vereinsicon_bl1m_3320{
+	background-position: 				0 0;
+	}	
+	
+.vereinsicon_bl1m_3317{
+	background-position: 				-50px 0px;
+	}	
+	
+.vereinsicon_bl1m_3313{
+	background-position: 				-100px 0px;
+	}	
+
+.vereinsicon_bl1m_3314{
+	background-position: 				-150px 0px;
+	}	
+.vereinsicon_bl1m_3312{
+	background-position: 				-200px 0px;
+	}	
+	
+.vereinsicon_bl1m_3316{
+	background-position: 				-250px 0px;
+	}	
+
+.vereinsicon_bl1m_3315{
+	background-position: 				-300px 0px;
+	}	
+.vereinsicon_bl1m_3311{
+	background-position: 				-350px 0px;
+	}	
+	
+.vereinsicon_bl1m_3319{
+	background-position: 				-400px 0px;
+	}	
+
+.vereinsicon_bl1m_3310{
+	background-position: 				-450px 0px;
+	}	
+.vereinsicon_bl1m_3318{
+	background-position: 				-500px 0px;
+	}	
+	
+.vereinsicon_bl1m_12{
+	background-position: 				-550px 0px;
+	}	
+
+.vereinsicon_bl1m_13{
+	background-position: 				-600px 0px;
+	}	
+	
+.vereinsicon_bl1m_14{
+	background-position: 				-650px 0px;
+}
+
+/* 1. Bl Frauen ********************************************************************/  
+.vereinsicon_bl1f_3323{
+	background-position: 				0 -50px;;
+	}	
+	
+.vereinsicon_bl1f_3326{
+	background-position: 				-50px -50px;
+	}	
+	
+.vereinsicon_bl1f_3332{
+	background-position: 				-100px -50px;
+	}	
+
+.vereinsicon_bl1f_3329{
+	background-position: 				-150px -50px;
+	}	
+.vereinsicon_bl1f_3328{
+	background-position: 				-200px -50px;
+	}	
+	
+.vereinsicon_bl1f_3331{
+	background-position: 				-250px -50px;
+	}	
+
+.vereinsicon_bl1f_3333{
+	background-position: 				-300px -50px;
+	}	
+.vereinsicon_bl1f_3325{
+	background-position: 				-350px -50px;
+	}	
+	
+.vereinsicon_bl1f_3324{
+	background-position: 				-400px -50px;
+	}	
+
+.vereinsicon_bl1f_3327{
+	background-position: 				-450px -50px;
+	}	
+.vereinsicon_bl1f_3330{
+	background-position: 				-500px -50px;
+	}	
+	
+.vereinsicon_bl1f_3335{
+	background-position: 				-550px -50px;
+	}	
+
+.vereinsicon_bl1f_3337{
+	background-position: 				-600px -50px;
+	}	
+	
+.vereinsicon_bl1f_3334{
+	background-position: 				-650px -50px;
+}
+
+/* 2 BL Süd Frauen ******************************************************/
+	
+.vereinsicon_bl2sf_3360{
+	background-position: 				0 -100px;;
+	}	
+	
+.vereinsicon_bl2sf_3361{
+	background-position: 				-50px -100px;
+	}	
+	
+.vereinsicon_bl2sf_3357{
+	background-position: 				-100px -100px;
+	}	
+
+.vereinsicon_bl2sf_3355{
+	background-position: 				-150px -100px;
+	}	
+.vereinsicon_bl2sf_3352{
+	background-position: 				-200px -100px;
+	}	
+	
+.vereinsicon_bl2sf_3354{
+	background-position: 				-250px -100px;
+	}	
+
+.vereinsicon_bl2sf_3351{
+	background-position: 				-300px -100px;
+	}	
+.vereinsicon_bl2sf_3350{
+	background-position: 				-350px -100px;
+	}	
+	
+.vereinsicon_bl2sf_3359{
+	background-position: 				-400px -100px;
+	}	
+
+.vereinsicon_bl2sf_3353{
+	background-position: 				-450px -100px;
+	}	
+.vereinsicon_bl2sf_3358{
+	background-position: 				-500px -100px;
+	}	
+	
+.vereinsicon_bl2sf_3356{
+	background-position: 				-550px -100px;
+	}	
+
+.vereinsicon_bl2sf_3349{
+	background-position: 				-600px -100px;
+	}	
+	
+.vereinsicon_bl2sf_14{
+	background-position: 				-650px -100px;
+}
+
+
+	
+/* bl2S Männer ********************************************************************/  
+
+.vereinsicon_bl2sm_3376{
+	background-position: 				0 -150px;;
+	}	
+	
+.vereinsicon_bl2sm_3380{
+	background-position: 				-50px -150px;
+	}	
+	
+
+.vereinsicon_bl2sm_3375{
+	background-position: 				-100px -150px;
+	}	
+.vereinsicon_bl2sm_3383{
+	background-position: 				-150px -150px;
+	}	
+	
+.vereinsicon_bl2sm_3379{
+	background-position: 				-200px -150px;
+	}	
+
+.vereinsicon_bl2sm_3386{
+	background-position: 				-250px -150px;
+	}	
+.vereinsicon_bl2sm_3377{
+	background-position: 				-300px -150px;
+	}	
+	
+.vereinsicon_bl2sm_3382{
+	background-position: 				-350px -150px;
+	}	
+
+.vereinsicon_bl2sm_3381{
+	background-position: 				-400px -150px;
+	}	
+.vereinsicon_bl2sm_3384{
+	background-position: 				-450px -150px;
+	}	
+	
+.vereinsicon_bl2sm_3385{
+	background-position: 				-500px -150px;
+	}	
+
+.vereinsicon_bl2sm_3378{
+	background-position: 				-550px -150px;
+	}	
+	
+.vereinsicon_bl2sm_3322{
+	background-position: 				-600px -150px;
+}
+	
+.vereinsicon_bl2sm_3374{
+	background-position: 				-650px -150px;
+}
+	
+/* bl2N Frauen ********************************************************************/  
+
+.vereinsicon_bl2nf_3342{
+	background-position: 				0 -200px;
+	}	
+	
+.vereinsicon_bl2nf_3338{
+	background-position: 				-50px -200px;
+	}	
+	
+.vereinsicon_bl2nf_3341{
+	background-position: 				-100px -200px;
+	}	
+
+.vereinsicon_bl2nf_3339{
+	background-position: 				-150px -200px;
+	}	
+.vereinsicon_bl2nf_3343{
+	background-position: 				-200px -200px;
+	}	
+	
+.vereinsicon_bl2nf_3347{
+	background-position: 				-250px -200px;
+	}	
+
+.vereinsicon_bl2nf_3340{
+	background-position: 				-300px -200px;
+	}	
+.vereinsicon_bl2nf_3348{
+	background-position: 				-350px -200px;
+	}	
+	
+.vereinsicon_bl2nf_3346{
+	background-position: 				-400px -200px;
+	}	
+
+.vereinsicon_bl2nf_3337{
+	background-position: 				-450px -200px;
+	}	
+.vereinsicon_bl2nf_3344{
+	background-position: 				-500px -200px;
+	}	
+	
+.vereinsicon_bl2nf_3345{
+	background-position: 				-550px -200px;
+	}	
+
+.vereinsicon_bl2nf_13{
+	background-position: 				-600px -200px;
+	}	
+	
+.vereinsicon_bl2nf_14{
+	background-position: 				-650px -200px;
+}
+	
+/* bl2N Männer ********************************************************************/  
+
+.vereinsicon_bl2nm_3362{
+	background-position: 				0 -250px;;
+	}	
+	
+.vereinsicon_bl2nm_3387{
+	background-position: 				-50px -250px;
+	}	
+	
+.vereinsicon_bl2nm_3388{
+	background-position: 				-100px -250px;
+	}	
+
+.vereinsicon_bl2nm_3373{
+	background-position: 				-150px -250px;
+	}	
+.vereinsicon_bl2nm_3368{
+	background-position: 				-200px -250px;
+	}	
+	
+.vereinsicon_bl2nm_3363{
+	background-position: 				-250px -250px;
+	}	
+
+.vereinsicon_bl2nm_3371{
+	background-position: 				-300px -250px;
+	}	
+.vereinsicon_bl2nm_3321{
+	background-position: 				-350px -250px;
+	}	
+	
+.vereinsicon_bl2nm_3370{
+	background-position: 				-400px -250px;
+	}	
+
+.vereinsicon_bl2nm_3364{
+	background-position: 				-450px -250px;
+	}	
+.vereinsicon_bl2nm_3365{
+	background-position: 				-500px -250px;
+	}	
+	
+.vereinsicon_bl2nm_3372{
+	background-position: 				-550px -250px;
+	}	
+
+.vereinsicon_bl2nm_3366{
+	background-position: 				-600px -250px;
+	}	
+	
+.vereinsicon_bl2nm_3367{
+	background-position: 				-650px -250px;	
+	
+}
+
+.vereinsicon_bl2nm_3369{
+	background-position: 				-700px -250px;	
+}	

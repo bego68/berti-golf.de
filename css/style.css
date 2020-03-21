@@ -1,0 +1,129 @@
+/* $Revision: 1.7 $
+© 2001 by Weißhuhn & Weißhuhn Kommunikationsmanagement GmbH
+*/
+
+/* Mouseover nur IE */
+a:hover     { color:#FF9900;
+}
+
+/* Textlinks */
+a           {
+             font-family:'Architects Daughter', Verdana, Arial; 
+             font-size:15px; 
+             color:#FF9900; 
+             text-decoration:none;
+}
+
+a:hover{
+	color:#FFFFFF; 
+}
+
+/* Textlinks auf LayoutPOPups*/
+.on        {
+             font-family:'Architects Daughter', Verdana, Arial; 
+             font-size:15px; 
+             color:#FF9900; 
+             text-decoration:none;
+} 
+
+/* Textlinks auf LayoutPOPups*/
+.off       {
+             font-family:'Architects Daughter', Verdana, Arial; 
+             font-size:15px; 
+             color:#FFFFFF; 
+             text-decoration:none;
+} 
+    
+/* Überschrift */
+.header     {
+             font-family: 'Architects Daughter', Verdana,Arial; 
+             font-size:30px; 
+             font-weight:bold;
+             color:#FFFFFF;
+             text-shadow: 2px 2px 2px #bbb;
+}
+/* kleine Überschrift nur für die Layoutbeispiele*/
+.subheader     {
+             font-family: 'Architects Daughter', Arial,Verdana; 
+             font-size:16px; 
+             font-weight:bold;
+             color:#FFFFFF;
+             text-shadow: 2px 2px 2px #bbb;
+}
+
+/* Text normal */
+.textnormal {
+             font-family:'Architects Daughter', Verdana, Arial; 
+             font-size:15px; 
+             color:#FFFFFF; 
+             text-decoration:none;
+}    
+
+/* Text normal */
+.textnormalbold {
+             font-family:'Architects Daughter', Verdana, Arial; 
+             font-size:15px; 
+             color:#FFFFFF; 
+             font-weight:bold;
+             text-decoration:none;
+             text-shadow: 2px 2px 2px #bbb;
+}         
+
+/* Text klein */
+.textklein  {
+             font-family:'Architects Daughter', Verdana, Arial; 
+             font-size:14px; 
+             color:#FFFFFF; 
+             text-decoration:none;
+}
+
+/* Text klein */
+.copyright  {
+             font-family:Arial, 'Architects Daughter', Verdana; 
+             font-size:14px; 
+             color:#FFFFFF; 
+             text-decoration:none;
+}
+
+/* MetaNavigation */
+.metanav    {
+             font-family:Arial, 'Architects Daughter', Verdana; 
+             font-size:15px; 
+             color:#FFFFFF; 
+             text-decoration:none;
+}
+
+/* MetaNavigation Highlight*/
+.metanavhigh{
+	font-family: Arial, 'Architects Daughter', Verdana;
+	font-size: 11px;
+	color: #FFFFFFF;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+/* Balken der MetaNavigation */
+.metanav2   {
+             font-family:Arial, 'Architects Daughter', Verdana; 
+             font-size:12px; 
+             color:#FFFFFF; 
+             text-decoration:none;
+}
+
+/* SubNavigation */
+.subnav    {
+             font-family:'Architects Daughter', Verdana, Arial; 
+             font-size:15px; 
+             color:#FFFFFF;
+             font-weight:bold;
+             text-decoration:none;
+}                   
+
+/* SubNavigation Highlight*/
+.subnavhigh{
+             font-family:'Architects Daughter', Verdana, Arial; 
+             font-size:15px; 
+             color:#FF9900;
+             font-weight:bold;
+             text-decoration:none;
+}                   

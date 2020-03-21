@@ -1,0 +1,5 @@
+
+<!-- saved from url=(0060)http://matthiasschuetz.com/content/artikel/jquery_tut5_3.txt -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;">$("#ajaxcontent").css({
+	"background": "yellow"
+});</pre></body></html>

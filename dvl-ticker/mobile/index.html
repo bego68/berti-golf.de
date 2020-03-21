@@ -1,0 +1,228 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>DVL 2011/2012</title> 
+	<meta charset=utf-8 />
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" /> 
+	<link rel="stylesheet" href="jquery.mobile-1.0b1.min.css" />
+	<script type="text/javascript" src="jquery-1.6.2.min.js"></script>
+	<script type="text/javascript" src="jquery.mobile-1.0b1.min.js"></script>
+	<link rel="stylesheet" href="dvl-ticker.css" type="text/css" media="screen,projection" />
+	<link rel="stylesheet" type="text/css"
+  media="screen and (max-device-width: 480px)"
+  href="480.css" />
+	<script>
+	     	$('div.ui-page').live("swipeleft", function(){
+		var nextpage = $(this).next('div[data-role="page"]');
+		// swipe using id of next page if exists
+		if (nextpage.length > 0) {
+			$.mobile.changePage(nextpage, 'slide');
+		}
+	});
+	$('div.ui-page').live("swiperight", function(){
+		var prevpage = $(this).prev('div[data-role="page"]');
+		// swipe using id of next page if exists
+		if (prevpage.length > 0) {
+			$.mobile.changePage(prevpage, 'slide', true);
+		}
+	});
+
+    	  </script>  
+</head> 
+<body> 
+
+<!-- Start of first page -->
+<div data-role="page" id="start">
+
+	<div data-role="header" >
+		<div class="dvl_button floatleft"></div><p>Volleyball Bundesliga</p>
+		<ul id="globalheader">
+			<li><a href="#start">&#60;</a> </li>
+			<li><a href="#2blnf"> 2LNF</a> </li>
+	    	<li><a href="#2blnm"> 2LNM </a></li>
+			<li class="active" ><a href="#start">&#926 </a></li>
+			<li><a href="#1blf"> 1BLF</a> </li>
+			<li><a href="#1blm"> 1BLM</a> </li>
+			<li><a href="#1blf">&#62;</a></li>
+		</ul>
+		
+	</div><!-- /header -->
+
+	<div data-role="content">
+	   <h1>Volleyball Bundesliga<br />2011/2012</h1>
+	   <p><img class="startbild" src="start_bild_2.png" alt="Volleyball Bundesliga"/></p>
+	</div><!-- /content -->
+
+	<div data-role="footer" id="footer1">
+		<div class="status"><p class="floatleft" ><b class="akt_datum"></b></p><p class="floatright"><b class="last_update"></b></p></div>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<!-- Start of Ticker 1. BL Frauen page -->
+<div data-role="page" id="1blf" data-position="fixed">
+
+	<div data-role="header">
+		<div class="dvl_button floatleft"></div><p>1. BL Frauen</p>
+		<ul id="globalheader">
+			<li><a href="#start">&#60;</a> </li>
+			<li><a href="#2blnm">2BLNM</a></li>
+			<li><a href="#start">&#926 </a></li>
+			<li  class="active"><a href="#1blf"> 1BLF </a></li>
+			<li><a href="#1blm"> 1BLM</a> </li>
+			<li><a href="#2blsf"> 2LSF</a> </li>
+			<li><a href="#1blm">&#62;</a> </li>
+	    </ul>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<div id="ticker_1blf" >
+						<div id="ticker_article_1blf">
+   				
+   		    	
+   		    </div>
+		</div>	
+	</div><!-- /content -->
+
+	<div data-role="footer" id="footer2">
+		<div class="status"><p class="floatleft" ><b class="akt_datum"></b></p><p class="floatright"><b class="last_update"></b></p></div>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<!-- Start of Ticker 1. BL Männer page -->
+<div data-role="page" id="1blm" data-position="fixed">
+    <div data-role="header">
+    	<div class="dvl_button floatleft"></div>
+    	<p>1. BL Männer</p>
+	    
+	    <ul id="globalheader">
+	    	<li><a href="#1blf">&#60;</a> </li>
+	    	
+	    	<li><a href="#start">&#926 </a></li>
+	    	<li><a href="#1blf"> 1BLF </a></li>
+	    	<li class="active"><a href="#1blm"> 1BLM</a> </li>
+	    	<li><a href="#2blsf"> 2LSF</a> </li>
+	    	<li><a href="#2blnm"> 2LSM </a></li>
+	    	<li><a href="#2blsf">&#62;</a></li></ul>
+			
+	    </div><!-- /header -->
+
+	<div data-role="content">	
+		<div id="ticker_1blm" ><div id="ticker_article_1blm"></div></div>	
+	</div><!-- /content -->
+
+	<div data-role="footer" id="footer3"><div class="status"><p class="floatleft" ><b class="akt_datum"></b></p><p class="floatright"><b class="last_update"></b></p></div></div><!-- /footer -->
+	  
+</div><!-- /page -->
+
+<!-- Start of Ticker 2. BL Süd Frauen page -->
+<div data-role="page" id="2blsf" data-position="fixed">
+    <div data-role="header">
+    	<div class="dvl_button floatleft"></div>
+    	<p>2. BL Süd Frauen</p>
+	    
+	    <ul id="globalheader">
+	    	<li><a href="#1blm">&#60;</a> </li>
+	    	<li><a href="#1blf"> 1BLF</a> </li>
+	    	<li><a href="#1blm"> 1BLM</a> </li>
+	    	<li  class="active" ><a href="#2blsf"> 2LSF</a> </li>
+	    	<li><a href="#2blsm"> 2LSM </a></li>
+	    	<li><a href="#2blnf">2LNF </a></li>
+	    	<li><a href="#2blsm">&#62;</a></li>
+	    </ul>
+			
+	    </div><!-- /header -->
+
+	<div data-role="content">	
+		<div id="ticker_1blm" ><div id="ticker_article_2blsf"></div></div>	
+	</div><!-- /content -->
+
+	<div data-role="footer" id="footer4"><div class="status"><p class="floatleft" ><b class="akt_datum"></b></p><p class="floatright"><b class="last_update"></b></p></div></div><!-- /footer -->
+	
+</div><!-- /page -->
+
+<!-- Start of Ticker 2. BL Süd Männer page -->
+<div data-role="page" id="2blsm" data-position="fixed">
+    <div data-role="header">
+    	<div class="dvl_button floatleft"></div>
+    	<p>2. BL Süd Männer</p>
+	    
+	    <ul id="globalheader">
+	    	<li><a href="#2blsf">&#60;</a> </li>
+	    	<li><a href="#1blm"> 1BLM</a> </li>
+	    	<li><a href="#2blsf"> 2LSF</a> </li>
+	    	<li  class="active" ><a href="#2blsm"> 2LSM </a></li>
+	    	<li id="nav_2blsnf" ><a href="#2blnf">2LNF </a></li>
+	    	<li><a href="#2blnm">2LNM</a></li>
+	    	<li><a href="#2blnf">&#62;</a></li>
+	    </ul>
+			
+	    </div><!-- /header -->
+
+	<div data-role="content">	
+		<div id="ticker_2blsm" ><div id="ticker_article_2blsm"></div></div>	
+	</div><!-- /content -->
+
+	<div data-role="footer" id="footer5"><div class="status"><p class="floatleft" ><b class="akt_datum"></b></p><p class="floatright"><b class="last_update"></b></p></div></div><!-- /footer -->
+	
+</div><!-- /page -->
+
+<!-- Start of Ticker 2. BL Nord Frauen page -->
+<div data-role="page" id="2blnf" data-position="fixed">
+    <div data-role="header">
+    	<div class="dvl_button floatleft"></div>
+    	<p>2. BL Nord Frauen</p>
+	    
+	    <ul id="globalheader">
+	    	<li><a href="#2blsm">&#60;</a> </li>
+	    	<li><a href="#2blsf"> 2LSF</a> </li>
+	    	<li><a href="#2blsm"> 2LSM </a></li>
+	    	<li class="active"><a href="#2blnf">2LNF </a></li>
+	    	<li><a href="#2blnm">2LNM</a></li>
+	    	<li><a href="#start">&#926 </a></li>
+	    	<li><a href="#2blnm">&#62;</a></li>
+	    </ul>
+			
+	    </div><!-- /header -->
+
+	<div data-role="content">	
+		<div id="ticker_1bnf" ><div id="ticker_article_2blnf"></div></div>	
+	</div><!-- /content -->
+
+	<div data-role="footer" id="footer6"><div class="status"><p class="floatleft" ><b class="akt_datum"></b></p><p class="floatright"><b class="last_update"></b></p></div></div><!-- /footer -->
+	
+</div><!-- /page -->
+
+<!-- Start of Ticker 2. BL Nord Männer page -->
+<div data-role="page" id="2blnm" data-position="fixed">
+    <div data-role="header">
+    	<div class="dvl_button floatleft"></div>
+    	<p>2. BL Nord Männer</p>
+	    
+	    <ul id="globalheader">
+	    	<li id="nav_1blm" ><a href="#2blnf">&#8249;</a> </li>
+	    	<li><a href="#2blsm"> 2LSM </a></li>
+	    	<li><a href="#2blnf">2LNF </a></li>
+	    	<li class="active"><a href="#2blnm">2LNM</a></li>
+	    	<li><a href="#start">&#926 </a></li>
+	    	<li><a href="#1blf"> 1BLF</a> </li>
+	    	<li><a href="#start">&#62;</a></li>
+	    </ul>
+			
+	    </div><!-- /header -->
+
+	<div data-role="content">	
+		<div id="ticker_2blnm" ><div id="ticker_article_2blnm"></div></div>	
+	</div><!-- /content -->
+
+	<div data-role="footer" id="footer7"><div class="status"><p class="floatleft" ><b class="akt_datum"></b></p><p class="floatright"><b class="last_update"></b></p></div></div><!-- /footer -->
+	
+</div><!-- /page -->
+
+
+
+
+
+<script src="dvl-ticker.js" type="text/javascript" > </script>
+</body>
+</html>

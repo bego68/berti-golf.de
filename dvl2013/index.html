@@ -1,0 +1,275 @@
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1"><script type="text/javascript" charset="utf-8" src="https://d3ezoyt41ban9s.cloudfront.net/javascript/web/3.4.0/appmobi.js"></script><script type="text/javascript" charset="utf-8">AppMobi.isweb = true;AppMobi.app = 'berti.test';AppMobi.package = 'PRODUCTION';AppMobi.webRoot = window.location.href.match('[^/]*//.*[/]{1}')[0];AppMobi.internal = {};AppMobi.internal.analyticsServer = '';</script>
+
+        <script type="text/javascript" language="javascript">
+            // This event handler is fired once the AppMobi libraries are ready
+            function onDeviceReady() {
+                //use AppMobi viewport to handle device resolution differences if you want
+                //AppMobi.display.useViewport(768,1024);
+
+                //hide splash screen now that our app is ready to run
+                AppMobi.device.hideSplashScreen();
+                setTimeout(function(){
+                    $.ui.launch();
+                },50);
+            }
+
+            //initial event handler to detect when appMobi is ready to roll
+            document.addEventListener("appMobi.device.ready",onDeviceReady,false);
+        </script> 
+
+        <script src="js/appframework.ui.min.js"></script>
+        <script>
+            $.ui.autoLaunch=false;
+            $.ui.useOSThemes=true;
+            $.ui.blockPageScroll();
+            $(document).ready(function(){
+                if($.ui.useOSThemes&&!$.os.ios&&$("#afui").get(0).className!=="ios")
+                $("#afui").removeClass("ios");
+            });
+        </script>
+        
+        <link href="css/icons.css" rel="stylesheet" type="text/css"></link>
+        <link href="css/af.ui.css" rel="stylesheet" type="text/css"></link>
+        <link href="css/dvl-ticker.css?250220121755" rel="stylesheet" type="text/css"  media="screen,projection" />
+    </head>
+ <body>
+        <div id="afui" class="ios">
+            <div id="splashscreen" class='ui-loader'>
+                <img src="dvlloadingscreen.png">
+                <span class='ui-icon ui-icon-loading spin'></span><h1 >Starting app</h1>
+            </div>
+            
+            <div id="header"></div>
+            <div id="content">
+                
+                <div id='lt_main' title='Bundesliga 2013/2014' selected=true class="panel" data-footer="footer" data-nav="nav_lt" data-header="header_lt"   data-appbuilder-object="page" scrolling='yes'>
+               		<div id="button_start_1blf"   data-transition='slide' class="start_button"><a href="#ticker_article_1blf">1. Bundesliga<br />Frauen</a></div>
+					<div id="button_start_1blm"   data-transition='slide' class="start_button"><a href="#ticker_article_1blm">1. Bundesliga <br />Männer</a></div>
+				   	<div id="button_start_2blsf"  data-transition='slide' class="start_button"><a href="#ticker_article_2blsf">2. Bundesliga <br />Süd Frauen</a></div>
+				   	<div id="button_start_2blsm"  data-transition='slide' class="start_button"><a href="#ticker_article_2blsm">2. Bundesliga <br />Süd Männer</a></div>
+				   	<div id="button_start_2blnf"  data-transition='slide' class="start_button"><a href="#ticker_article_2blnf">2. Bundesliga <br />Nord Frauen</a></div>
+				   	<div id="button_start_2blnm"  data-transition='slide' class="start_button"><a href="#ticker_article_2blnm">2. Bundesliga <br />Nord Männer</a></div>
+                    <div id="button_start_dvvf"  data-transition='slide' class="start_button"><a href="#ticker_article_dvvf">DVV Pokal<br /> Frauen</a></div>
+                    <div id="button_start_dvvm"  data-transition='slide' class="start_button"><a href="#ticker_article_dvvm">DVV Pokal<br /> Männer</a></div>
+	    		</div>
+    			<div id='ticker_article_1blf'  title="1BLF"  class="panel swipe" data-footer="footer" data-nav="nav_lt" data-header="header_lt_1blf"  data-appbuilder-object="page" scrolling='no'>1BLF	</div>
+				<div id='ticker_article_1blm'  title='1BLM'  class="panel" data-footer="footer" data-nav="nav_lt" data-header="header_lt_1blm"  data-appbuilder-object="page" scrolling='yes'>1BLM</div>
+				<div id='ticker_article_2blsf' title='2BLSF' class="panel" data-footer="footer" data-nav="nav_lt" data-header="header_lt_2blsf" data-appbuilder-object="page" scrolling='yes'>2BLSF</div>
+				<div id='ticker_article_2blsm' title='2BLSM' class="panel" data-footer="footer" data-nav="nav_lt" data-header="header_lt_2blsm" data-appbuilder-object="page" scrolling='yes'>2BLSM</div>
+				<div id='ticker_article_2blnf' title='2BLNF' class="panel" data-footer="footer" data-nav="nav_lt" data-header="header_lt_2blnf" data-appbuilder-object="page" scrolling='yes'>2BLNF</div>
+				<div id='ticker_article_2blnm' title='2BLNM' class="panel" data-footer="footer" data-nav="nav_lt" data-header="header_lt_2blnm" data-appbuilder-object="page" scrolling='yes'>2BLNM</div>				
+				<div id='ticker_article_dvvf'  title='DVVF'  class="panel" data-footer="footer" data-nav="nav_lt" data-header="header_lt_dvvf"  data-appbuilder-object="page" scrolling='yes'>DVV F</div>				
+				<div id='ticker_article_dvvm'  title='DVVM'  class="panel" data-footer="footer" data-nav="nav_lt" data-header="header_lt_dvvm"  data-appbuilder-object="page" scrolling='yes'>DVV M</div>			
+				
+				<div id='tab_main' title='Bundesliga 2013/2014'  class="panel" data-footer="footer" data-nav="nav_tab" data-header="header_tab"   data-appbuilder-object="page" scrolling='yes'>
+   					<div id="button_start_1blf"   data-transition='slide' class="start_button"><a href="#tab_1blf">1. Bundesliga <br />Frauen</a></div>
+					<div id="button_start_1blm"   data-transition='slide' class="start_button"><a href="#tab_1blm">1. Bundesliga <br />Männer</a></div>
+				   	<div id="button_start_2blsf"  data-transition='slide' class="start_button"><a href="#tab_2blsf">2. Bundesliga <br />Süd Frauen</a></div>
+				   	<div id="button_start_2blsm"  data-transition='slide' class="start_button"><a href="#tab_2blsm">2. Bundesliga <br />Süd Männer</a></div>
+				   	<div id="button_start_2blnf"  data-transition='slide' class="start_button"><a href="#tab_2blnf">2. Bundesliga <br />Nord Frauen</a></div>
+				   	<div id="button_start_2blnm"  data-transition='slide' class="start_button"><a href="#tab_2blnm">2. Bundesliga <br />Nord Männer</a></div>
+                    <div id="button_start_dvvf"  data-transition='slide' class="start_button"><a href="#tab_dvvf">DVV Pokal<br /> Frauen</a></div>
+                    <div id="button_start_dvvm"  data-transition='slide' class="start_button"><a href="#tab_dvvm">DVV Pokal<br /> Männer</a></div>
+	    		</div>
+    			<div id='tab_1blf'  title="1BLF"  class="panel" data-footer="footer" data-nav="nav_tab" data-header="header_tab_1blf"  data-appbuilder-object="page" scrolling='yes'>1BLF	</div>
+				<div id='tab_1blm'  title='1BLM'  class="panel" data-footer="footer" data-nav="nav_tab" data-header="header_tab_1blm"  data-appbuilder-object="page" scrolling='yes'>1BLM</div>
+				<div id='tab_2blsf' title='2BLSF' class="panel" data-footer="footer" data-nav="nav_tab" data-header="header_tab_2blsf" data-appbuilder-object="page" scrolling='yes'>2BLSF</div>
+				<div id='tab_2blsm' title='2BLSM' class="panel" data-footer="footer" data-nav="nav_tab" data-header="header_tab_2blsm" data-appbuilder-object="page" scrolling='yes'>2BLSM</div>
+				<div id='tab_2blnf' title='2BLNF' class="panel" data-footer="footer" data-nav="nav_tab" data-header="header_tab_2blnf" data-appbuilder-object="page" scrolling='yes'>2BLNF</div>
+				<div id='tab_2blnm' title='2BLNM' class="panel" data-footer="footer" data-nav="nav_tab" data-header="header_tab_2blnm" data-appbuilder-object="page" scrolling='yes'>2BLNM</div>				
+				<div id='tab_dvvf'  title='DVVF'  class="panel" data-footer="footer" data-nav="nav_tab" data-header="header_tab_dvvf"  data-appbuilder-object="page" scrolling='yes'>DVV F</div>				
+				<div id='tab_dvvm'  title='DVVM'  class="panel" data-footer="footer" data-nav="nav_tab" data-header="header_tab_dvvm"  data-appbuilder-object="page" scrolling='yes'>DVV M</div>			
+
+				<div id='sp_main' title='Bundesliga 2013/2014'  class="panel" data-footer="footer" data-nav="nav_sp" data-header="header_sp"   data-appbuilder-object="page" scrolling='yes'>
+   					<div id="button_start_1blf"   data-transition='slide' class="start_button"><a href="#erg_1blf">1. Bundesliga <br />Frauen</a></div>
+					<div id="button_start_1blm"   data-transition='slide' class="start_button"><a href="#erg_1blm">1. Bundesliga <br />Männer</a></div>
+				   	<div id="button_start_2blsf"  data-transition='slide' class="start_button"><a href="#erg_2blsf">2. Bundesliga <br />Süd Frauen</a></div>
+				   	<div id="button_start_2blsm"  data-transition='slide' class="start_button"><a href="#erg_2blsm">2. Bundesliga <br />Süd Männer</a></div>
+				   	<div id="button_start_2blnf"  data-transition='slide' class="start_button"><a href="#erg_2blnf">2. Bundesliga <br />Nord Frauen</a></div>
+				   	<div id="button_start_2blnm"  data-transition='slide' class="start_button"><a href="#erg_2blnm">2. Bundesliga <br />Nord Männer</a></div>
+                    <div id="button_start_dvvf"  data-transition='slide' class="start_button"><a href="#erg_dvvf">DVV Pokal<br /> Frauen</a></div>
+                    <div id="button_start_dvvm"  data-transition='slide' class="start_button"><a href="#erg_dvvm">DVV Pokal<br /> Männer</a></div>
+	    		</div>
+    			<div id='erg_1blf'  title="1BLF"  class="panel" data-footer="footer" data-nav="nav_sp" data-header="header_sp_1blf"  data-appbuilder-object="page" scrolling='yes'>1BLF	</div>
+				<div id='erg_1blm'  title='1BLM'  class="panel" data-footer="footer" data-nav="nav_sp" data-header="header_sp_1blm"  data-appbuilder-object="page" scrolling='yes'>1BLM</div>
+				<div id='erg_2blsf' title='2BLSF' class="panel" data-footer="footer" data-nav="nav_sp" data-header="header_sp_2blsf" data-appbuilder-object="page" scrolling='yes'>2BLSF</div>
+				<div id='erg_2blsm' title='2BLSM' class="panel" data-footer="footer" data-nav="nav_sp" data-header="header_sp_2blsm" data-appbuilder-object="page" scrolling='yes'>2BLSM</div>
+				<div id='erg_2blnf' title='2BLNF' class="panel" data-footer="footer" data-nav="nav_sp" data-header="header_sp_2blnf" data-appbuilder-object="page" scrolling='yes'>2BLNF</div>
+				<div id='erg_2blnm' title='2BLNM' class="panel" data-footer="footer" data-nav="nav_sp" data-header="header_sp_2blnm" data-appbuilder-object="page" scrolling='yes'>2BLNM</div>				
+				<div id='erg_dvvf'  title='DVVF'  class="panel" data-footer="footer" data-nav="nav_sp" data-header="header_sp_dvvf"  data-appbuilder-object="page" scrolling='yes'>DVV F</div>				
+				<div id='erg_dvvm'  title='DVVM'  class="panel" data-footer="footer" data-nav="nav_sp" data-header="header_sp_dvvm"  data-appbuilder-object="page" scrolling='yes'>DVV M</div>			
+
+				<div id='pr_main' title='Bundesliga 2013/2014'  class="panel" data-footer="footer" data-nav="nav_pr" data-header="header_pr"   data-appbuilder-object="page" scrolling='yes'>
+   					<div id="button_start_1blf"   data-transition='slide' class="start_button"><a href="#press_1blf">1. Bundesliga <br />Frauen</a></div>
+					<div id="button_start_1blm"   data-transition='slide' class="start_button"><a href="#press_1blm">1. Bundesliga <br />Männer</a></div>
+				   	<div id="button_start_2blsf"  data-transition='slide' class="start_button"><a href="#press_2blsf">2. Bundesliga <br />Süd Frauen</a></div>
+				   	<div id="button_start_2blsm"  data-transition='slide' class="start_button"><a href="#press_2blsm">2. Bundesliga <br />Süd Männer</a></div>
+				   	<div id="button_start_2blnf"  data-transition='slide' class="start_button"><a href="#press_2blnf">2. Bundesliga <br />Nord Frauen</a></div>
+				   	<div id="button_start_2blnm"  data-transition='slide' class="start_button"><a href="#press_2blnm">2. Bundesliga <br />Nord Männer</a></div>
+                    <div id="button_start_dvvf"  data-transition='slide' class="start_button"><a href="#press_dvvf">DVV Pokal<br /> Frauen</a></div>
+                    <div id="button_start_dvvm"  data-transition='slide' class="start_button"><a href="#press_dvvm">DVV Pokal<br /> Männer</a></div>
+	    		</div>
+    			<div id='press_1blf' class="presse" title="1BLF"  class="panel" data-footer="footer" data-nav="nav_pr" data-header="header_pr_1blf"  data-appbuilder-object="page" scrolling='yes'>1BLF	</div>
+				<div id='press_1blm' class="presse" title='1BLM'  class="panel" data-footer="footer" data-nav="nav_pr" data-header="header_pr_1blm"  data-appbuilder-object="page" scrolling='yes'>1BLM</div>
+				<div id='press_2blsf' class="presse" title='2BLSF' class="panel" data-footer="footer" data-nav="nav_pr" data-header="header_pr_2blsf" data-appbuilder-object="page" scrolling='yes'>2BLSF</div>
+				<div id='press_2blsm' class="presse" title='2BLSM' class="panel" data-footer="footer" data-nav="nav_pr" data-header="header_pr_2blsm" data-appbuilder-object="page" scrolling='yes'>2BLSM</div>
+				<div id='press_2blnf' class="presse" title='2BLNF' class="panel" data-footer="footer" data-nav="nav_pr" data-header="header_pr_2blnf" data-appbuilder-object="page" scrolling='yes'>2BLNF</div>
+				<div id='press_2blnm' class="presse" title='2BLNM' class="panel" data-footer="footer" data-nav="nav_pr" data-header="header_pr_2blnm" data-appbuilder-object="page" scrolling='yes'>2BLNM</div>				
+				<div id='press_dvvf'  class="presse" title='DVVF'  class="panel" data-footer="footer" data-nav="nav_pr" data-header="header_pr_dvvf"  data-appbuilder-object="page" scrolling='yes'>DVV F</div>				
+				<div id='press_dvvm' class="presse" title='DVVM'  class="panel" data-footer="footer" data-nav="nav_pr" data-header="header_pr_dvvm"  data-appbuilder-object="page" scrolling='yes'>DVV M</div>			
+
+				<div id='news_main' title='Bundesliga 2013/2014'  class="panel" data-footer="footer" data-nav="nav_news" data-header="header_news"   data-appbuilder-object="page" scrolling='yes'>
+   					<div id="button_start_1blf"   data-transition='slide' class="start_button"><a href="#news_1blf">1. Bundesliga <br />Frauen</a></div>
+					<div id="button_start_1blm"   data-transition='slide' class="start_button"><a href="#news_1blm">1. Bundesliga <br />Männer</a></div>
+				   	<div id="button_start_2blsf"  data-transition='slide' class="start_button"><a href="#news_2blsf">2. Bundesliga <br />Süd Frauen</a></div>
+				   	<div id="button_start_2blsm"  data-transition='slide' class="start_button"><a href="#news_2blsm">2. Bundesliga <br />Süd Männer</a></div>
+				   	<div id="button_start_2blnf"  data-transition='slide' class="start_button"><a href="#news_2blnf">2. Bundesliga <br />Nord Frauen</a></div>
+				   	<div id="button_start_2blnm"  data-transition='slide' class="start_button"><a href="#news_2blnm">2. Bundesliga <br />Nord Männer</a></div>
+                    <div id="button_start_dvvf"  data-transition='slide' class="start_button"><a href="#news_dvvf">DVV Pokal<br /> Frauen</a></div>
+                    <div id="button_start_dvvm"  data-transition='slide' class="start_button"><a href="#news_dvvm">DVV Pokal<br /> Männer</a></div>
+	    		</div>
+    			<div id='news_1blf'  title="1BLF"  class="panel news" data-footer="footer" data-nav="nav_news" data-header="header_news_1blf"  data-appbuilder-object="page" scrolling='yes'>1BLF</div>
+				<div id='news_1blm'  title='1BLM'  class="panel news" data-footer="footer" data-nav="nav_news" data-header="header_news_1blm"  data-appbuilder-object="page" scrolling='yes'>1BLM</div>
+				<div id='news_2blsf' title='2BLSF' class="panel news" data-footer="footer" data-nav="nav_news" data-header="header_news_2blsf" data-appbuilder-object="page" scrolling='yes'>2BLSF</div>
+				<div id='news_2blsm' title='2BLSM' class="panel news" data-footer="footer" data-nav="nav_news" data-header="header_news_2blsm" data-appbuilder-object="page" scrolling='yes'>2BLSM</div>
+				<div id='news_2blnf' title='2BLNF' class="panel news" data-footer="footer" data-nav="nav_news" data-header="header_news_2blnf" data-appbuilder-object="page" scrolling='yes'>2BLNF</div>
+				<div id='news_2blnm' title='2BLNM' class="panel news" data-footer="footer" data-nav="nav_news" data-header="header_news_2blnm" data-appbuilder-object="page" scrolling='yes'>2BLNM</div>				
+				<div id='news_dvvf'  title='DVVF'  class="panel news" data-footer="footer" data-nav="nav_news" data-header="header_news_dvvf"  data-appbuilder-object="page" scrolling='yes'>DVV F</div>				
+				<div id='news_dvvm'  title='DVVM'  class="panel news" data-footer="footer" data-nav="nav_news" data-header="header_news_dvvm"  data-appbuilder-object="page" scrolling='yes'>DVV M</div>			
+
+				
+            </div>
+            <header id="header_lt" data-appbuilder-object="header" ><h1 class="headermain"> </h1></header>
+      		<header id="header_lt_1blf" data-appbuilder-object="header"><h1 class="normal">1BL F</h1><a  href="#ticker_article_dvvm" class="button">DVV m</a><a  href="#ticker_article_1blm" class="button floatright">1BL m</a></header>
+      		<header id="header_lt_1blm" data-appbuilder-object="header"><h1 class="normal">1BL m</h1><a  href="#ticker_article_1blf" class="button">1BL f</a><a  href="#ticker_article_2blsf" class="button floatright">2BLS f</a></header>
+      		<header id="header_lt_2blsf" data-appbuilder-object="header"><h1 class="normal">2BLS f</h1><a  href="#ticker_article_1blm" class="button">1BL m</a><a  href="#ticker_article_2blsm" class="button floatright">2BLS m</a></header>
+      		<header id="header_lt_2blsm" data-appbuilder-object="header"><h1 class="normal">2BLS m</h1><a  href="#ticker_article_2blsf" class="button">2BLS f</a><a  href="#ticker_article_2blnf" class="button floatright">2BLN f</a></header>
+      		<header id="header_lt_2blnf" data-appbuilder-object="header"><h1 class="normal">2BLN f</h1><a  href="#ticker_article_2blsm" class="button">2BLS m</a><a  href="#ticker_article_2blnm" class="button floatright">2BLN m</a></header>
+      		<header id="header_lt_2blnm" data-appbuilder-object="header"><h1 class="normal">2BLN m</h1><a  href="#ticker_article_2blnf" class="button">2BLN f</a><a  href="#ticker_article_dvvf" class="button floatright">DVV f</a></header>
+      		<header id="header_lt_dvvf" data-appbuilder-object="header"><h1 class="normal">DVV f</h1><a  href="#ticker_article_2blnm" class="button">2BLN m</a><a  href="#ticker_article_dvvm" class="button floatright">DVV m</a></header>
+      		<header id="header_lt_dvvm" data-appbuilder-object="header"><h1 class="normal">DVV m</h1><a  href="#ticker_article_dvvf" class="button">DVV f</a><a  href="#ticker_article_1blf" class="button floatright">1BL f</a></header>      
+            
+            <header id="header_tab" data-appbuilder-object="header" ><h1 class="headermain"> </h1></header>
+            <header id="header_tab_1blf" data-appbuilder-object="header"><h1 class="normal">1BL F</h1><a  href="#tab_dvvm" class="button">DVV m</a><a  href="#tab_1blm" class="button floatright">1BL m</a></header>
+      		<header id="header_tab_1blm" data-appbuilder-object="header"><h1 class="normal">1BL m</h1><a  href="#tab_1blf" class="button">1BL f</a><a  href="#tab_2blsf" class="button floatright">2BLS f</a></header>
+      		<header id="header_tab_2blsf" data-appbuilder-object="header"><h1 class="normal">2BLS f</h1><a  href="#tab_1blm" class="button">1BL m</a><a  href="#tab_2blsm" class="button floatright">2BLS m</a></header>
+      		<header id="header_tab_2blsm" data-appbuilder-object="header"><h1 class="normal">2BLS m</h1><a  href="#tab_2blsf" class="button">2BLS f</a><a  href="#tab_2blnf" class="button floatright">2BLN f</a></header>
+      		<header id="header_tab_2blnf" data-appbuilder-object="header"><h1 class="normal">2BLN f</h1><a  href="#tab_2blsm" class="button">2BLS m</a><a  href="#tab_2blnm" class="button floatright">2BLN m</a></header>
+      		<header id="header_tab_2blnm" data-appbuilder-object="header"><h1 class="normal">2BLN m</h1><a  href="#tab_2blnf" class="button">2BLN f</a><a  href="#tab_dvvf" class="button floatright">DVV f</a></header>
+      		<header id="header_tab_dvvf" data-appbuilder-object="header"><h1 class="normal">DVV f</h1><a  href="#tab_2blnm" class="button">2BLN m</a><a  href="#tab_dvvm" class="button floatright">DVV m</a></header>
+      		<header id="header_tab_dvvm" data-appbuilder-object="header"><h1 class="normal">DVV m</h1><a  href="#tab_dvvf" class="button">DVV f</a><a  href="#tab_1blf" class="button floatright">1BL f</a></header>      
+            
+            <header id="header_sp" data-appbuilder-object="header" ><h1 class="headermain"> </h1></header>
+             <header id="header_sp_1blf" data-appbuilder-object="header"><h1 class="normal">1BL F</h1><a href="#erg_dvvm"  class="button">DVV m</a><a  href="#erg_1blm" class="button floatright">1BL m</a></header>
+      		<header id="header_sp_1blm" data-appbuilder-object="header"><h1 class="normal">1BL m</h1><a  href="#erg_1blf"  class="button">1BL f</a><a  href="#erg_2blsf" class="button floatright">2BLS f</a></header>
+      		<header id="header_sp_2blsf" data-appbuilder-object="header"><h1 class="normal">2BLS f</h1><a href="#erg_1blm"  class="button">1BL m</a><a  href="#erg_2blsm" class="button floatright">2BLS m</a></header>
+      		<header id="header_sp_2blsm" data-appbuilder-object="header"><h1 class="normal">2BLS m</h1><a href="#erg_2blsf" class="button">2BLS f</a><a  href="#erg_2blnf" class="button floatright">2BLN f</a></header>
+      		<header id="header_sp_2blnf" data-appbuilder-object="header"><h1 class="normal">2BLN f</h1><a href="#erg_2blsm" class="button">2BLS m</a><a  href="#erg_2blnm" class="button floatright">2BLN m</a></header>
+      		<header id="header_sp_2blnm" data-appbuilder-object="header"><h1 class="normal">2BLN m</h1><a href="#erg_2blnf" class="button">2BLN f</a><a  href="#erg_dvvf" class="button floatright">DVV f</a></header>
+      		<header id="header_sp_dvvf" data-appbuilder-object="header"><h1 class="normal">DVV f</h1><a  href="#erg_2blnm" class="button">2BLN m</a><a  href="#erg_dvvm" class="button floatright">DVV m</a></header>
+      		<header id="header_sp_dvvm" data-appbuilder-object="header"><h1 class="normal">DVV m</h1><a  href="#erg_dvvf"  class="button">DVV f</a><a  href="#erg_1blf" class="button floatright">1BL f</a></header>      
+            
+            <header id="header_pr" data-appbuilder-object="header" ><h1 class="headermain"> </h1></header>
+            <header id="header_pr_1blf" data-appbuilder-object="header"><h1 class="normal">1BL F</h1><a  href="#press_dvvm" class="button">DVV m</a><a  href="#press_1blm" class="button floatright">1BL m</a></header>
+      		<header id="header_pr_1blm" data-appbuilder-object="header"><h1 class="normal">1BL m</h1><a  href="#press_1blf" class="button">1BL f</a><a  href="#press_2blsf" class="button floatright">2BLS f</a></header>
+      		<header id="header_pr_2blsf" data-appbuilder-object="header"><h1 class="normal">2BLS f</h1><a  href="#press_1blm" class="button">1BL m</a><a  href="#press_2blsm" class="button floatright">2BLS m</a></header>
+      		<header id="header_pr_2blsm" data-appbuilder-object="header"><h1 class="normal">2BLS m</h1><a  href="#press_2blsf" class="button">2BLS f</a><a  href="#press_2blnf" class="button floatright">2BLN f</a></header>
+      		<header id="header_pr_2blnf" data-appbuilder-object="header"><h1 class="normal">2BLN f</h1><a  href="#press_2blsm" class="button">2BLS m</a><a  href="#press_2blnm" class="button floatright">2BLN m</a></header>
+      		<header id="header_pr_2blnm" data-appbuilder-object="header"><h1 class="normal">2BLN m</h1><a  href="#press_2blnf" class="button">2BLN f</a><a  href="#press_dvvf" class="button floatright">DVV f</a></header>
+      		<header id="header_pr_dvvf" data-appbuilder-object="header"><h1 class="normal">DVV f</h1><a  href="#press_2blnm" class="button">2BLN m</a><a  href="#press_dvvm" class="button floatright">DVV m</a></header>
+      		<header id="header_pr_dvvm" data-appbuilder-object="header"><h1 class="normal">DVV m</h1><a  href="#press_dvvf" class="button">DVV f</a><a  href="#press_1blf" class="button floatright">1BL f</a></header>      
+            
+            <header id="header_news" data-appbuilder-object="header" ><h1 class="headermain"> </h1></header>
+            <header id="header_news_1blf" data-appbuilder-object="header"><h1 class="normal">1BL F</h1><a  href="#news_dvvm" class="button">DVV m</a><a  href="#news_1blm" class="button floatright">1BL m</a></header>
+      		<header id="header_news_1blm" data-appbuilder-object="header"><h1 class="normal">1BL m</h1><a  href="#news_1blf" class="button">1BL f</a><a  href="#news_2blsf" class="button floatright">2BLS f</a></header>
+      		<header id="header_news_2blsf" data-appbuilder-object="header"><h1 class="normal">2BLS f</h1><a  href="#news_1blm" class="button">1BL m</a><a  href="#news_2blsm" class="button floatright">2BLS m</a></header>
+      		<header id="header_news_2blsm" data-appbuilder-object="header"><h1 class="normal">2BLS m</h1><a  href="#news_2blsf" class="button">2BLS f</a><a  href="#news_2blnf" class="button floatright">2BLN f</a></header>
+      		<header id="header_news_2blnf" data-appbuilder-object="header"><h1 class="normal">2BLN f</h1><a  href="#news_2blsm" class="button">2BLS m</a><a  href="#news_2blnm" class="button floatright">2BLN m</a></header>
+      		<header id="header_news_2blnm" data-appbuilder-object="header"><h1 class="normal">2BLN m</h1><a  href="#news_2blnf" class="button">2BLN f</a><a  href="#news_dvvf" class="button floatright">DVV f</a></header>
+      		<header id="header_news_dvvf" data-appbuilder-object="header"><h1 class="normal">DVV f</h1><a  href="#news_2blnm" class="button">2BLN m</a><a  href="#news_dvvm" class="button floatright">DVV m</a></header>
+      		<header id="header_news_dvvm" data-appbuilder-object="header"><h1 class="normal">DVV m</h1><a  href="#news_dvvf" class="button">DVV f</a><a  href="#news_1blf" class="button floatright">1BL f</a></header>      
+            
+            
+            
+            <footer id='footer' class="liveticker">
+            	<a class="lifeticker pressed" href="#lt_main">Liveticker</a>
+            	<a  class="tabelle"  data-transition='slide'  href="#tab_main">Tabelle</a>
+    			<a class="spielplan"  data-transition='slide' href="#sp_main">Spielplan</a>
+				<a class="presse" data-transition='slide'  href="#pr_main">Presse</a>
+				<a  class="news" data-transition='slide' href="#news_main">News</a>
+			</footer>
+			
+			
+
+			
+			
+			
+			<nav id="nav_lt">
+				<div class="startheader">Live-Ticker</div>
+				<div id="button_start_1blf"   data-transition='slide' class="start_button"><a href="#ticker_article_1blf">1. Bundesliga <br />Frauen</a></div>
+				<div id="button_start_1blm"   data-transition='slide' class="start_button"><a href="#ticker_article_1blm">1. Bundesliga <br />Männer</a></div>
+			   	<div id="button_start_2blsf"  data-transition='slide' class="start_button"><a href="#ticker_article_2blsf">2. Bundesliga <br />Süd Frauen</a></div>
+			   	<div id="button_start_2blsm"  data-transition='slide' class="start_button"><a href="#ticker_article_2blsm">2. Bundesliga <br />Süd Männer</a></div>
+			   	<div id="button_start_2blnf"  data-transition='slide' class="start_button"><a href="#ticker_article_2blnf">2. Bundesliga <br />Nord Frauen</a></div>
+			   	<div id="button_start_2blnm"  data-transition='slide' class="start_button"><a href="#ticker_article_2blnm">2. Bundesliga <br />Nord Männer</a></div>		
+			</nav>
+			
+			<nav id="nav_tab">
+				<div class="startheader">Tabellen</div>
+				<div id="button_start_1blf"   data-transition='slide' class="start_button"><a href="#tab_1blf">1. Bundesliga <br />Frauen</a></div>
+				<div id="button_start_1blm"   data-transition='slide' class="start_button"><a href="#tab_1blm">1. Bundesliga <br />Männer</a></div>
+			   	<div id="button_start_2blsf"  data-transition='slide' class="start_button"><a href="#tab_2blsf">2. Bundesliga <br />Süd Frauen</a></div>
+			   	<div id="button_start_2blsm"  data-transition='slide' class="start_button"><a href="#tab_2blsm">2. Bundesliga <br />Süd Männer</a></div>
+			   	<div id="button_start_2blnf"  data-transition='slide' class="start_button"><a href="#tab_2blnf">2. Bundesliga <br />Nord Frauen</a></div>
+			   	<div id="button_start_2blnm"  data-transition='slide' class="start_button"><a href="#tab_2blnm">2. Bundesliga <br />Nord Männer</a></div>		
+			</nav>
+			
+			<nav id="nav_sp">
+				<div class="startheader">Spielplan</div>
+				<div id="button_start_1blf"   data-transition='slide' class="start_button"><a href="#erg_1blf">1. Bundesliga <br />Frauen</a></div>
+				<div id="button_start_1blm"   data-transition='slide' class="start_button"><a href="#erg_1blm">1. Bundesliga <br />Männer</a></div>
+			   	<div id="button_start_2blsf"  data-transition='slide' class="start_button"><a href="#erg_2blsf">2. Bundesliga <br />Süd Frauen</a></div>
+			   	<div id="button_start_2blsm"  data-transition='slide' class="start_button"><a href="#erg_2blsm">2. Bundesliga <br />Süd Männer</a></div>
+			   	<div id="button_start_2blnf"  data-transition='slide' class="start_button"><a href="#erg_2blnf">2. Bundesliga <br />Nord Frauen</a></div>
+			   	<div id="button_start_2blnm"  data-transition='slide' class="start_button"><a href="#erg_2blnm">2. Bundesliga <br />Nord Männer</a></div>		
+			</nav>
+
+			<nav id="nav_pr">
+				<div class="startheader">Presse</div>
+				<div id="button_start_1blf"   data-transition='slide' class="start_button"><a href="#press_1blf">1. Bundesliga <br />Frauen</a></div>
+				<div id="button_start_1blm"   data-transition='slide' class="start_button"><a href="#press_1blm">1. Bundesliga <br />Männer</a></div>
+			   	<div id="button_start_2blsf"  data-transition='slide' class="start_button"><a href="#press_2blsf">2. Bundesliga <br />Süd Frauen</a></div>
+			   	<div id="button_start_2blsm"  data-transition='slide' class="start_button"><a href="#press_2blsm">2. Bundesliga <br />Süd Männer</a></div>
+			   	<div id="button_start_2blnf"  data-transition='slide' class="start_button"><a href="#press_2blnf">2. Bundesliga <br />Nord Frauen</a></div>
+			   	<div id="button_start_2blnm"  data-transition='slide' class="start_button"><a href="#press_2blnm">2. Bundesliga <br />Nord Männer</a></div>		
+			</nav>
+			
+			<nav id="nav_news">
+				<div class="startheader">DVL News</div>
+				<div id="button_start_1blf"   data-transition='slide' class="start_button"><a href="#news_1blf">1. Bundesliga <br />Frauen</a></div>
+				<div id="button_start_1blm"   data-transition='slide' class="start_button"><a href="#news_1blm">1. Bundesliga <br />Männer</a></div>
+			   	<div id="button_start_2blsf"  data-transition='slide' class="start_button"><a href="#news_2blsf">2. Bundesliga <br />Süd Frauen</a></div>
+			   	<div id="button_start_2blsm"  data-transition='slide' class="start_button"><a href="#news_2blsm">2. Bundesliga <br />Süd Männer</a></div>
+			   	<div id="button_start_2blnf"  data-transition='slide' class="start_button"><a href="#news_2blnf">2. Bundesliga <br />Nord Frauen</a></div>
+			   	<div id="button_start_2blnm"  data-transition='slide' class="start_button"><a href="#news_2blnm">2. Bundesliga <br />Nord Männer</a></div>		
+			</nav>
+
+            
+        </div>
+        <script src="js/dvl-ticker.js" type="text/javascript" > </script>
+		<script>
+			ladeDaten.erstelleTicker();
+			var tabelleAktiv = window.setInterval("ladeDaten.erstelleTicker()", 30000);
+            ladeDaten.erstelleTabellen();
+            ladeDaten.erstellePress();
+            ladeDaten.erstelleNews();
+
+		</script>
+    </body>
+</html>

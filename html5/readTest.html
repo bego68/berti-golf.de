@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Tests für read.js</title>
+<link rel="stylesheet" href="../qunit.css">
+
+
+<div id="qunit"></div>
+
+
+<p>
+  <label>
+    Die Datei test/read.js/test.png auswählen um den Test zu beenden:
+    <input type="file" id="Testinput">
+  <label>
+</p>
+
+
+<script src="../../lib/vendor/hacks.js"></script>
+<script src="../qunit.js"></script>
+<script>
+var require = {
+  paths: {
+    'lib/read': '../../lib/read',
+    'lib/vendor/jquery': '../../lib/vendor/jquery'
+  },
+  shim: {
+    'lib/vendor/jquery': {
+      exports: '$'
+    }
+  }
+}
+</script>
+<script src="../../lib/vendor/require.js" data-main="readTest.js"></script>

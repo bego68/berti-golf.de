@@ -1,0 +1,87 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+	<head>
+		<title>jQuery-Tutorial: Ajax</title>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#ajaxcontent").css({
+					"width": 200,
+					"height": 200,
+					"border": "1px solid"
+					});
+ 
+					$("button").css({
+						"display": "block"
+					});
+					
+					$("#ajaxloadlink").click(function(){
+							$("#ajaxcontent").load(
+							"ajax.php",
+							{
+							ajaxpost: "post()-Daten (POST)"
+							},
+							function (responseText, textStatus, XMLHttpRequest){
+							alert(
+							responseText + ", " +
+							textStatus + ", " +
+							XMLHttpRequest
+							);
+							}
+							);
+							});
+
+
+				$("#ajaxgetlink").click(function(){
+					$.get("ajax.php",
+						{
+							ajaxget: "get()-Daten (GET)"
+						},
+						function(data){
+							$("#ajaxcontent").html(data);
+						}
+					);
+				});
+				
+				$("#ajaxpostlink").click(function(){
+					$.post("ajax.php",
+						{
+							ajaxpost: "post()-Daten (POST)"
+						},
+						function(data){
+							$("#ajaxcontent").html(data);
+						}
+					);
+				});
+				
+				$("#ajaxlink").click(function(){
+					$.ajax({
+						type: "GET",
+						url: "ajax.php",
+						data: "ajaxget=ajax()-Daten+(GET)",
+						success: function(data){
+							$("#ajaxcontent").html(data);
+						}
+					});
+				});
+				
+				
+				$("#ajaxscriptlink").click(function(){
+					$.getScript("	ajax.js", function(){
+						$("#ajaxcontent").html("getScript() geladen.");
+					});
+				});
+
+			});
+		</script>
+	</head>
+
+	<body>
+		<button id="ajaxloadlink">Lade ajax.php mit load()</button>
+		<button id="ajaxgetlink">Lade ajax.php mit get()</button>
+		<button id="ajaxpostlink">Lade ajax.php mit post()</button>
+		<button id="ajaxlink">Lade ajax.php mit ajax()</button>
+		<button id="ajaxscriptlink">Lade script.js mit getScript()</button>
+		<div id="ajaxcontent"></div>
+	</body>
+</html>

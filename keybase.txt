@@ -1,0 +1,66 @@
+==================================================================
+https://keybase.io/berti
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://berti-golf.de
+  * I am berti (https://keybase.io/berti) on keybase.
+  * I have a public key with fingerprint 5714 CBFC DA39 84D4 79B3  1610 E82B
+  * 927A 0563 27A8
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "5714cbfcda3984d479b31610e82b927a056327a8",
+            "host": "keybase.io",
+            "key_id": "e82b927a056327a8",
+            "uid": "b5c47d8db28f6e6922a01a3400036f00",
+            "username": "berti"
+        },
+        "service": {
+            "hostname": "berti-golf.de",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1408346096,
+    "expire_in": 157680000,
+    "prev":
+    "bca5e7ea140dc5612d1e4ec8347ffc3f81b2375dcdee245d4192364a956940a7",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v0.3.1
+Comment: https://keybase.io/crypto
+
+yMHcAnicbVFbSBRhFN5dTWlBiIxCJNLf9VKtNvfLQvigkUg3MqWi2v6Z+WcdXWfW
+2VlNF6VyxYKKeiiIwMiiDQvCsB4kUcLYxLSXrChMekmRYLOHyrTsHynooafDOee7
+Hc5IRorD7by9/AMsbnNNO8eGkxFH1Xz8cxRIhtICfFFQj1aKqukBZIZMTbeAD7A8
+yciSKiuQFgVGYXhRokmOJJBASSLFQ4LlaFwE4AW1RthmYBkJhlGJZuAZbvyagqf/
+wUdWFhIrM7wiKBIlqBziRIqCBAlphiAImlMJwgaGkanDBmSjkWlpoM0L8KhJk5Ed
+2Pb9d10cMIJqiYIwM2QaliEbQbyqtayQz2ZaLSEb2owk/x8Rv6TpCr4aE5qQGdYM
+HfhIjJQtzVYlGUKgGY4QOS9AJ0KaifyajWB5TsApCdsGNdnuMmQRjyAmKDLLkZRC
+IgbJmMyrqkyrAilRNM8qsoIQxbAKQ4oUzTFQZDmRISAP7LMadQP4aBwTBrBkWAvo
+0IqYCLQ9GT6S6nC6HWmrXPbfHO7Va/5+84qa/ousap3yX08cdk7U5Yy6l/KHGvxf
+YK7uKpsCHGjs3D0z8bE43rtUObh+vD8ZrXu7syyhOR4/H2oomK/iUcqZlrSi1Kme
+k1mX6h8mmivyuh4t9jYeH5iuDa891H40M3PwalbPriSMf/fE9g0zpYvBydPf7p7f
+Mt4dKxy6tjF79sWnn/G+qMdVNHOv/eWe3Nell2vggWpPTsrg2LuKysk3fbfOXijM
+jxQPWJmB6tSFHee0U5Xbu7j0m6Ps3LqmgoW83CD77NiEMzp78b3zRsdXz2h+oqt8
+w9bszRWtNfuXX8ViI9EOP2BdT/uluPFh+cHI/Zi3+2DyTuem8r1z5UTGbwV9EWw=
+=uUeV
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/berti
+
+==================================================================

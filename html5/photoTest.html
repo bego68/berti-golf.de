@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Tests für photo.js</title>
+<link rel="stylesheet" href="../qunit.css">
+
+
+<div id="qunit"></div>
+
+
+<canvas height="200" width="200" style="border: 1px solid black"></canvas>
+
+
+<script src="../../lib/vendor/hacks.js"></script>
+<script src="../qunit.js"></script>
+<script>
+var require = {
+  paths: {
+    'lib/photo': '../../lib/photo',
+    'lib/vendor/jquery': '../../lib/vendor/jquery'
+  },
+  shim: {
+    'lib/vendor/jquery': {
+      exports: '$'
+    }
+  }
+}
+</script>
+<script src="../../lib/vendor/require.js" data-main="photoTest.js"></script>
